@@ -17,7 +17,7 @@ export const Container = styled.header`
   ul {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
   }
 `;
 
