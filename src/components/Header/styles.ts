@@ -16,14 +16,13 @@ export const Container = styled.header<NavProps>`
   position: fixed;
   width: 100%;
   padding: 2rem 8rem;
-  background: ${props =>
-    props.isActive ? 'rgba(0, 14, 27, 0.8)' : 'trasparent'};
+  background: rgba(0, 14, 27, 0.8);
   backdrop-filter: blur(2rem);
   border-bottom: 1px solid
     ${props => (props.isActive ? props.theme.backgroundLight : 'trasparent')};
 
   img {
-    width: 12.5rem;
+    width: 16rem;
   }
 
   ul {
@@ -31,16 +30,29 @@ export const Container = styled.header<NavProps>`
     align-items: center;
     gap: 4rem;
   }
+
+  @media (max-width: 1450px) {
+    padding: 2rem 4rem;
+    > img {
+      width: 14rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    > img {
+      width: 12rem;
+    }
+  }
 `;
 
 export const NavLinkContainer = styled.li<NavLinkProps>`
   a {
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     line-height: 3.5rem;
     position: relative;
     color: ${props =>
-      props.isActive ? props.theme.primary : darken(0.2, props.theme.text)};
+      props.isActive ? props.theme.primary : props.theme.text};
     transition: all 0.5s ease-in-out;
 
     &::before {
@@ -50,18 +62,28 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
       background: ${({ theme }) => theme.primary};
       position: absolute;
       transition: all 0.5s ease-in-out;
-      bottom: -20%;
+      bottom: -30%;
       left: 0;
     }
 
     &:hover {
       color: ${props =>
-        props.isActive ? darken(0.2, props.theme.primary) : props.theme.text};
+        props.isActive
+          ? darken(0.2, props.theme.primary)
+          : darken(0.2, props.theme.text)};
 
       &::before {
         height: ${props => (props.isActive ? '4px' : '2px')};
         width: 100%;
       }
+    }
+
+    @media (max-width: 1450px) {
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: 1000px) {
+      display: none;
     }
   }
 `;
