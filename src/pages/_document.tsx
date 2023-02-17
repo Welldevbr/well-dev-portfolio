@@ -46,7 +46,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
-          <link rel="ico" href="../static/favicon.ico" type="image/png" />
+          <link rel="ico" href="/assets/favicon.ico" type="image/png" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />

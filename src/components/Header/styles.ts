@@ -22,6 +22,10 @@ export const Container = styled.header<NavProps>`
   border-bottom: 1px solid
     ${props => (props.isActive ? props.theme.backgroundLight : 'trasparent')};
 
+  img {
+    width: 12.5rem;
+  }
+
   ul {
     display: flex;
     align-items: center;
@@ -32,7 +36,7 @@ export const Container = styled.header<NavProps>`
 export const NavLinkContainer = styled.li<NavLinkProps>`
   a {
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.25rem;
     line-height: 3.5rem;
     position: relative;
     color: ${props =>
