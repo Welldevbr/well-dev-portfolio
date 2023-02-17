@@ -1,9 +1,24 @@
+import { useEffect, useState } from 'react';
 import { NavLink } from './NavLink';
 import { Container } from './styles';
 
 export default function Header() {
+  const [navbar, setNavbar] = useState(false);
+
+  useEffect(() => {
+    const changeNavbarColor = () => {
+      if (window.scrollY >= 1) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    };
+
+    window.addEventListener('scroll', changeNavbarColor);
+  }, []);
+
   return (
-    <Container>
+    <Container isActive={navbar}>
       <svg
         width="198"
         height="55"

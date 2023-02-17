@@ -1,4 +1,4 @@
-import { lighten } from 'polished';
+import { darken } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
@@ -16,7 +16,7 @@ export default createGlobalStyle`
       border-radius: 10px;
     }
     ::-webkit-scrollbar-track{
-      background: ${({ theme }) => lighten(0.4, theme.primary)};
+      background: ${({ theme }) => darken(0.5, theme.primary)};
     }
   }
   body {
