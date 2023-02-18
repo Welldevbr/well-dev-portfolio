@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import { CodeItem, Container, InfosContainer, TextContainer } from './styles';
+import { Container, InfosContainer, TextContainer } from './styles';
+import { CodeItem } from '../CodeItem';
 import perfilImage from '../../assets/perfil.png';
 
 export function HomeHero() {
