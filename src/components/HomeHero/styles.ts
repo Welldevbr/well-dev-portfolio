@@ -49,6 +49,10 @@ export const Container = styled.section`
       width: 100%;
     }
   }
+
+  @media (max-width: 420px) {
+    margin-top: 8rem;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -70,15 +74,7 @@ export const TextContainer = styled.div`
     font-size: 6rem;
     line-height: 5rem;
     color: ${({ theme }) => theme.primary};
-    margin-bottom: 2rem;
-  }
-
-  p {
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 2.8rem;
-    margin-left: 0.5rem;
-    color: ${({ theme }) => darken(0.3, theme.text)};
+    margin-bottom: 0.6rem;
   }
 
   @media (max-width: 1450px) {
@@ -90,11 +86,6 @@ export const TextContainer = styled.div`
 
     h1 {
       font-size: 5rem;
-    }
-
-    p {
-      font-size: 1.6rem;
-      line-height: 2.6rem;
     }
   }
 
@@ -108,11 +99,6 @@ export const TextContainer = styled.div`
     h1 {
       font-size: 4rem;
     }
-
-    p {
-      font-size: 1.4rem;
-      line-height: 2rem;
-    }
   }
 
   @media (max-width: 700px) {
@@ -125,10 +111,16 @@ export const TextContainer = styled.div`
     h1 {
       font-size: 4rem;
     }
+  }
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.8rem;
+  @media (max-width: 420px) {
+    gap: 0;
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    h1 {
+      font-size: 3rem;
     }
   }
 `;
@@ -144,7 +136,7 @@ export const CodeItem = styled.pre`
   background: ${({ theme }) => theme.gradient};
   padding: 2rem;
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.25rem;
   color: ${({ theme }) => theme.text};
   width: 24rem;
@@ -166,7 +158,7 @@ export const CodeItem = styled.pre`
   }
 
   span.comment {
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => darken(0.3, theme.text)};
     margin-bottom: 1rem;
     display: block;
   }
@@ -177,5 +169,15 @@ export const CodeItem = styled.pre`
 
   span.data {
     color: #ffbb56;
+  }
+
+  @media (max-width: 1450px) {
+    width: 18rem;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
   }
 `;

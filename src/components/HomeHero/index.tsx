@@ -10,11 +10,10 @@ export function HomeHero() {
         <TextContainer>
           <h2>Olá, eu sou</h2>
           <h1>Wellington</h1>
-          <p>Seja bem-vindo ao meu portfólio</p>
         </TextContainer>
         <InfosContainer>
           <CodeItem>
-            <span className="comment">//Minha apresentação</span>
+            <span className="comment">//Seja bem-vindo(a)</span>
             <span className="purple">Infos</span> {'\u007B'}
             <div>
               Nome: <span className="data">Wellington Santana</span>,

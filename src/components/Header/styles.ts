@@ -38,9 +38,22 @@ export const Container = styled.header<NavProps>`
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
+    padding: 2rem;
     > img {
       width: 12rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    > img {
+      width: 10rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    > img {
+      width: 8rem;
     }
   }
 `;
@@ -82,7 +95,7 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
       font-size: 1.4rem;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
       display: none;
     }
   }
