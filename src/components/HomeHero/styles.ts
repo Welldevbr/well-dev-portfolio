@@ -8,11 +8,26 @@ export const Container = styled.section`
   width: 100%;
   margin-top: 8rem;
   margin-inline: auto;
+  position: relative;
+  z-index: 1;
 
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  &::before {
+    content: '';
+    width: 12rem;
+    height: 6rem;
+    background: ${({ theme }) => theme.primary};
+    position: absolute;
+    right: 0;
+    top: 30%;
+    z-index: -1;
+    filter: blur(10rem);
+    transform: rotate(-35deg);
+  }
 
   > img {
     width: 40rem;
@@ -70,7 +85,7 @@ export const TextContainer = styled.div`
 
   h1 {
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 5.8rem;
     line-height: 5rem;
     color: ${({ theme }) => theme.primary};
     margin-bottom: 0.6rem;
