@@ -1,14 +1,19 @@
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { RiMenu3Fill } from 'react-icons/ri';
 import { NavLink } from './NavLink';
 import { Container } from './styles';
 import logoImage from '../../assets/Logo.png';
 
-export default function Header() {
+interface HeaderProps {
+  setMenuVisible: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function Header({ setMenuVisible }: HeaderProps) {
   const [navbar, setNavbar] = useState(false);
 
   useEffect(() => {
     const changeNavbarColor = () => {
-      if (window.scrollY >= 100) {
+      if (window.scrollY >= 20) {
         setNavbar(true);
       } else {
         setNavbar(false);
@@ -27,6 +32,7 @@ export default function Header() {
         <NavLink title="Habilidades" path="/skills" />
         <NavLink title="Projetos" path="/projects" />
       </ul>
+      <RiMenu3Fill size={40} onClick={() => setMenuVisible(true)} />
     </Container>
   );
 }

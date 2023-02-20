@@ -25,6 +25,7 @@ export const Container = styled.div`
     }
 
     @media (max-width: 1450px) {
+      padding: 2rem;
       img {
         width: 26rem;
       }
@@ -113,17 +114,27 @@ export const Container = styled.div`
             width: 100%;
           }
         }
+
+        @media (max-width: 1000px) {
+          h1 {
+            font-size: 2.4rem;
+          }
+
+          h2 {
+            font-size: 1.2rem;
+          }
+        }
       }
 
       @media (max-width: 1200px) {
         p {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
         }
       }
 
       @media (max-width: 700px) {
         p {
-          font-size: 1.4rem;
+          font-size: 1rem;
         }
       }
     }

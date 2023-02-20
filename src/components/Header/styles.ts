@@ -1,4 +1,4 @@
-import { darken, rgba } from 'polished';
+import { darken, lighten, rgba } from 'polished';
 import styled from 'styled-components';
 
 interface NavProps {
@@ -34,10 +34,30 @@ export const Container = styled.header<NavProps>`
     gap: 4rem;
   }
 
+  svg {
+    display: none;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ${({ theme }) => theme.text};
+
+    &:hover {
+      color: ${({ theme }) => theme.primary};
+    }
+  }
+
   @media (max-width: 1450px) {
     padding: 2rem 4rem;
     > img {
       width: 14rem;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    ul {
+      display: none;
+    }
+    svg {
+      display: block;
     }
   }
 
@@ -85,12 +105,16 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     &:hover {
       color: ${props =>
         props.isActive
-          ? darken(0.2, props.theme.primary)
+          ? lighten(0.2, props.theme.primary)
           : darken(0.2, props.theme.text)};
 
       &::before {
         height: ${props => (props.isActive ? '4px' : '2px')};
         width: 100%;
+        background: ${props =>
+          props.isActive
+            ? lighten(0.2, props.theme.primary)
+            : props.theme.primary};
       }
     }
 
@@ -99,7 +123,7 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     }
 
     @media (max-width: 1200px) {
-      display: none;
+      font-size: 1.4rem;
     }
   }
 `;
