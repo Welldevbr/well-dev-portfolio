@@ -1,4 +1,4 @@
-import { darken } from 'polished';
+import { darken, rgba } from 'polished';
 import styled from 'styled-components';
 
 interface NavProps {
@@ -14,9 +14,12 @@ export const Container = styled.header<NavProps>`
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  z-index: 1000;
   width: 100%;
   padding: 2rem 8rem;
-  background: rgba(0, 14, 27, 0.8);
+
+  background: ${props =>
+    props.isActive ? rgba(0, 14, 27, 0.8) : 'transparent'};
   backdrop-filter: blur(2rem);
   border-bottom: 1px solid
     ${props => (props.isActive ? props.theme.backgroundLight : 'trasparent')};

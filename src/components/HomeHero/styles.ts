@@ -78,14 +78,14 @@ export const TextContainer = styled.div`
 
   h2 {
     font-weight: 700;
-    font-size: 2.8rem;
-    line-height: 2.5rem;
+    font-size: 2.4rem;
+    line-height: 2rem;
     color: ${({ theme }) => theme.text};
   }
 
   h1 {
     font-weight: 700;
-    font-size: 5.8rem;
+    font-size: 5rem;
     line-height: 5rem;
     color: ${({ theme }) => theme.primary};
     margin-bottom: 0.6rem;
@@ -95,11 +95,11 @@ export const TextContainer = styled.div`
     gap: 1.6rem;
 
     h2 {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
 
     h1 {
-      font-size: 5rem;
+      font-size: 4.8rem;
     }
   }
 
@@ -107,7 +107,7 @@ export const TextContainer = styled.div`
     gap: 0.6rem;
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     h1 {
@@ -119,16 +119,15 @@ export const TextContainer = styled.div`
     gap: 0.4rem;
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 3.8rem;
     }
   }
 
   @media (max-width: 420px) {
-    gap: 0;
     h2 {
       font-size: 1.6rem;
     }

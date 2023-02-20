@@ -8,7 +8,7 @@ export default function Header() {
 
   useEffect(() => {
     const changeNavbarColor = () => {
-      if (window.scrollY >= 1) {
+      if (window.scrollY >= 100) {
         setNavbar(true);
       } else {
         setNavbar(false);
@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <Container isActive={navbar}>
-      <img src={logoImage} alt="logotipo" />
+      <img draggable="false" src={logoImage} alt="logotipo" />
       <ul>
         <NavLink title="Home" path="/" />
         <NavLink title="Sobre mim" path="/about" />
