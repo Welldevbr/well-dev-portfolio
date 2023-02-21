@@ -3,26 +3,30 @@ import { Container } from './styles';
 import { ProjectItem } from './ProjectItem';
 import { SectionTitle } from '../SectionTitle';
 
+import breeze from '../../assets/breeze.png';
+import move from '../../assets/move.png';
+import comics from '../../assets/comics.png';
+
 export function Projects() {
   return (
     <Container>
       <SectionTitle title="Ultimos Projetos" />
       <section>
         <ProjectItem
-          img="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+          img={breeze}
           title="Breeze-ask"
           type="Website"
           slug="/projeto"
         />
         <ProjectItem
-          img="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+          img={move}
           title="Move.it"
           type="Website"
           slug="/projeto"
         />
         <ProjectItem
-          img="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
-          title="Origin-six"
+          img={comics}
+          title="Comics Marvel"
           type="Website"
           slug="/projeto"
         />

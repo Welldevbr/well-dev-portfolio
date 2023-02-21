@@ -100,7 +100,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
       width: 100%;
       height: 100%;
       background: ${({ theme }) => theme.gradient};
-      opacity: 0.85;
+      opacity: 0.75;
       transition: 0.5s;
     }
 

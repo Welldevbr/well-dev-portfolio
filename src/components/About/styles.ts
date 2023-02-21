@@ -15,11 +15,6 @@ export const Container = styled.div`
     margin-block: 6rem;
     border-bottom: 3px solid ${({ theme }) => theme.primary};
 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
     img {
       width: 30rem;
     }
@@ -56,8 +51,9 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.text};
 
       p {
-        font-size: 1.6rem;
-        line-height: 2.5rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 2rem;
       }
 
       header {
@@ -148,7 +144,7 @@ export const Container = styled.div`
     }
 
     &:hover {
-      filter: brightness(0.85);
+      filter: brightness(1.2);
     }
   }
 `;

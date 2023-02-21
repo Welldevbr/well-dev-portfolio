@@ -16,7 +16,7 @@ export const Container = styled.div<MenuProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 
   opacity: 0;
   pointer-events: none;

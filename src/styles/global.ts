@@ -8,6 +8,11 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     ::-webkit-scrollbar {
       width: 8px;
       height: 5px;

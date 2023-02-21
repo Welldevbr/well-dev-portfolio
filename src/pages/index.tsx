@@ -5,6 +5,7 @@ import { HomeHero } from '../components/HomeHero';
 import { About } from '../components/About';
 import { MenuMobile } from '../components/MenuMobile';
 import { Projects } from '../components/Projects/index';
+import { Works } from '../components/Works';
 
 export default function Home() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -19,6 +20,7 @@ export default function Home() {
           <HomeHero />
           <About />
           <Projects />
+          <Works />
         </main>
       </HomeContainer>
     </>
