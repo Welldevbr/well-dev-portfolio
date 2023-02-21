@@ -104,6 +104,11 @@ export const WorkContainer = styled.div`
     }
   }
 
+  @media (max-width: 1000px) {
+    padding: 4rem 2rem;
+    height: 100%;
+  }
+
   @media (max-width: 700px) {
     div {
       width: 4rem;
