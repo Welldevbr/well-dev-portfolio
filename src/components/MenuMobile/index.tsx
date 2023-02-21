@@ -11,7 +11,7 @@ interface MenuProps {
 export function MenuMobile({ menuVisible, setMenuVisible }: MenuProps) {
   return (
     <Container isVisible={menuVisible}>
-      <IoClose size={40} onClick={() => setMenuVisible(false)} />
+      <IoClose size={45} onClick={() => setMenuVisible(false)} />
       <nav>
         <NavLink title="Home" path="/" />
         <NavLink title="Sobre mim" path="/about" />

@@ -25,7 +25,7 @@ export const Container = styled.header<NavProps>`
     ${props => (props.isActive ? props.theme.backgroundLight : 'trasparent')};
 
   img {
-    width: 16rem;
+    width: 14rem;
   }
 
   ul {
@@ -48,7 +48,7 @@ export const Container = styled.header<NavProps>`
   @media (max-width: 1450px) {
     padding: 2rem 4rem;
     > img {
-      width: 14rem;
+      width: 12rem;
     }
   }
 
@@ -63,9 +63,6 @@ export const Container = styled.header<NavProps>`
 
   @media (max-width: 1000px) {
     padding: 2rem;
-    > img {
-      width: 12rem;
-    }
   }
 
   @media (max-width: 700px) {
@@ -83,8 +80,8 @@ export const Container = styled.header<NavProps>`
 
 export const NavLinkContainer = styled.li<NavLinkProps>`
   a {
-    font-weight: 600;
-    font-size: 1.6rem;
+    font-weight: 500;
+    font-size: 1.5rem;
     line-height: 3.5rem;
     position: relative;
     color: ${props =>
@@ -119,10 +116,6 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     }
 
     @media (max-width: 1450px) {
-      font-size: 1.4rem;
-    }
-
-    @media (max-width: 1200px) {
       font-size: 1.4rem;
     }
   }

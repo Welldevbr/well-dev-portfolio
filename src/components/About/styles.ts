@@ -12,7 +12,7 @@ export const Container = styled.div`
     padding: 4rem;
     transition: 0.5s;
 
-    margin-block: 7rem;
+    margin-block: 6rem;
     border-bottom: 3px solid ${({ theme }) => theme.primary};
 
     -webkit-user-select: none;
@@ -133,14 +133,22 @@ export const Container = styled.div`
       }
 
       @media (max-width: 700px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1rem;
+        }
         p {
           font-size: 1rem;
+          line-height: 2rem;
         }
       }
     }
 
     &:hover {
-      filter: brightness(1.2);
+      filter: brightness(0.85);
     }
   }
 `;
