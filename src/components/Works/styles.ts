@@ -1,3 +1,4 @@
+import { lighten } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -32,6 +33,12 @@ export const WorkContainer = styled.div`
   border: 2px solid ${({ theme }) => theme.secundary};
   border-radius: 5px;
   gap: 2rem;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    background: ${({ theme }) => lighten(0.02, theme.backgroundLight)};
+    border: 2px solid ${({ theme }) => theme.primary};
+  }
 
   div {
     background: ${({ theme }) => theme.secundary};
