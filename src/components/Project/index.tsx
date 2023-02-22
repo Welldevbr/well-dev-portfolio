@@ -10,16 +10,14 @@ interface ProjectProps {
 
 export function Project({ title, type, imgUrl, slug }: ProjectProps) {
   return (
-    <Container>
+    <Container imgUrl={imgUrl}>
       <Link href={`/projects/${slug}`}>
         <a>
-          <div className="overlay">
-            <section>
-              <img src={imgUrl} alt="" />
-              <h1>{title}</h1>
-              <h2>{type}</h2>
-            </section>
-          </div>
+          <div className="overlay" />
+          <section>
+            <h1>{title}</h1>
+            <h2>{type}</h2>
+          </section>
         </a>
       </Link>
     </Container>

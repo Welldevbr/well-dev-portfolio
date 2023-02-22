@@ -61,7 +61,8 @@ export const ProjectContainer = styled.div<ProjectProps>`
       }
 
       > div.overlay {
-        opacity: 0.4;
+        opacity: 1;
+        backdrop-filter: blur(12px);
       }
     }
 
