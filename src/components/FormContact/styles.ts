@@ -1,9 +1,7 @@
 import { darken } from 'polished';
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  margin-bottom: 6rem;
-`;
+export const Container = styled.section``;
 
 export const FormContainer = styled.form`
   margin-top: 8rem;

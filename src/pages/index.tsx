@@ -8,6 +8,7 @@ import { Projects } from '../components/Projects/index';
 import { Works } from '../components/Works';
 import { Skills } from '../components/Skills';
 import { FormContact } from '../components/FormContact';
+import { Footer } from '../components/Footer';
 
 export default function Home() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -26,6 +27,8 @@ export default function Home() {
           <Skills />
           <FormContact />
         </main>
+
+        <Footer />
       </HomeContainer>
     </>
   );
