@@ -53,7 +53,7 @@ export const SkillContainer = styled.div`
     transition: 0.5s;
   }
 
-  &::after {
+  &::before {
     content: '';
     width: 0%;
     height: 2px;
@@ -61,6 +61,7 @@ export const SkillContainer = styled.div`
     position: absolute;
     bottom: -15%;
     left: 0;
+    transition: 0.5s;
   }
 
   &:hover {
@@ -73,7 +74,7 @@ export const SkillContainer = styled.div`
       transform: scale(0.95);
     }
 
-    &::after {
+    &::before {
       width: 100%;
     }
   }
