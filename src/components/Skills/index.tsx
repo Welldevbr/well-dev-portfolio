@@ -33,7 +33,7 @@ export function Skills() {
         <SkillItem title="Typescript" icon={<SiTypescript />} />
         <SkillItem title="React" icon={<SiReact />} />
         <SkillItem title="Sass" icon={<SiSass />} />
-        <SkillItem title="Styled Components" icon={<SiStyledcomponents />} />
+        <SkillItem title="CSS-in-JS" icon={<SiStyledcomponents />} />
         <SkillItem title="Material UI" icon={<SiMaterialui />} />
         <SkillItem title="Bootstrap" icon={<SiBootstrap />} />
         <SkillItem title="Node" icon={<SiNodedotjs />} />

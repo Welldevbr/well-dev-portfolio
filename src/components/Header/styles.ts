@@ -90,13 +90,16 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
 
     &::before {
       content: '';
-      width: ${props => (props.isActive ? '100%' : '0%')};
+      width: 100%;
       height: 2px;
       background: ${({ theme }) => theme.primary};
       position: absolute;
       transition: all 0.5s ease-in-out;
       bottom: -30%;
       left: 0;
+      transform: ${props => (props.isActive ? 'scaleX(1)' : 'scaleX(0)')};
+      transform-origin: bottom right;
+      transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
     &:hover {
@@ -106,12 +109,12 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
           : darken(0.2, props.theme.text)};
 
       &::before {
-        height: ${props => (props.isActive ? '4px' : '2px')};
-        width: 100%;
         background: ${props =>
           props.isActive
             ? lighten(0.2, props.theme.primary)
             : props.theme.primary};
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
     }
 

@@ -9,14 +9,14 @@ export const Container = styled.div`
     gap: 2rem;
     align-items: center;
     background: ${({ theme }) => theme.gradient};
-    padding: 4rem;
+    padding: 2rem 4rem;
     transition: 0.5s;
 
     margin-block: 6rem;
     border-bottom: 3px solid ${({ theme }) => theme.primary};
 
     img {
-      width: 30rem;
+      width: 35rem;
     }
 
     @media (max-width: 1450px) {
@@ -144,7 +144,7 @@ export const Container = styled.div`
     }
 
     &:hover {
-      filter: brightness(1.2);
+      filter: brightness(1.1);
     }
   }
 `;

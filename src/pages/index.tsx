@@ -7,6 +7,7 @@ import { MenuMobile } from '../components/MenuMobile';
 import { Projects } from '../components/Projects/index';
 import { Works } from '../components/Works';
 import { Skills } from '../components/Skills';
+import { FormContact } from '../components/FormContact';
 
 export default function Home() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -23,6 +24,7 @@ export default function Home() {
           <Projects />
           <Works />
           <Skills />
+          <FormContact />
         </main>
       </HomeContainer>
     </>
