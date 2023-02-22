@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import { HomeHero } from '../components/HomeHero';
 import { About } from '../components/About';
 import { MenuMobile } from '../components/MenuMobile';
-import { Projects } from '../components/Projects/index';
+import { ProjectsSection } from '../components/ProjectsSection/index';
 import { Works } from '../components/Works';
 import { Skills } from '../components/Skills';
 import { FormContact } from '../components/FormContact';
@@ -22,7 +22,7 @@ export default function Home() {
         <main className="container">
           <HomeHero />
           <About />
-          <Projects />
+          <ProjectsSection />
           <Works />
           <Skills />
           <FormContact />

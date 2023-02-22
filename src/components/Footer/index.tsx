@@ -10,10 +10,19 @@ export function Footer() {
     window.open(url, '_blank');
   }
 
+  function handleBackToTop() {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <Container>
       <div className="container">
-        <button type="button">Voltar ao topo</button>
+        <button type="button" onClick={handleBackToTop}>
+          Voltar ao topo
+        </button>
         <section>
           <AiFillGithub
             onClick={() => handleRedirect('https://github.com/Welldevbr')}

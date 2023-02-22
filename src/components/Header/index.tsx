@@ -5,7 +5,7 @@ import { Container } from './styles';
 import logoImage from '../../assets/Logo.png';
 
 interface HeaderProps {
-  setMenuVisible: Dispatch<SetStateAction<boolean>>;
+  setMenuVisible?: Dispatch<SetStateAction<boolean>>;
 }
 
 export default function Header({ setMenuVisible }: HeaderProps) {

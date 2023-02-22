@@ -7,7 +7,7 @@ import breeze from '../../assets/breeze.png';
 import move from '../../assets/move.png';
 import comics from '../../assets/comics.png';
 
-export function Projects() {
+export function ProjectsSection() {
   return (
     <Container>
       <SectionTitle title="Ultimos Projetos" />

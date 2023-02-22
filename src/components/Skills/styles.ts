@@ -30,6 +30,7 @@ export const Container = styled.div`
 `;
 
 export const SkillContainer = styled.div`
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
