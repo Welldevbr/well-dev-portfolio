@@ -3,7 +3,7 @@ import Header from '../../../components/Header';
 import { Container } from '../../../styles/ProjectOwnStyles';
 import breeze from '../../../assets/breeze.png';
 
-export function ProjectOwn() {
+export function Project() {
   return (
     <Container>
       <Header />
