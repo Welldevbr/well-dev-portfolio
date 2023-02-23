@@ -12,16 +12,21 @@ export default function Projects() {
           <Project
             title="Breeze ask"
             type="Website"
-            slug="breeze"
+            slug="teste"
             imgUrl={breeze}
           />
           <Project
             title="Comics Marvel"
             type="Website"
-            slug="comics"
+            slug="teste"
             imgUrl={breeze}
           />
-          <Project title="Move.it" type="Website" slug="move" imgUrl={breeze} />
+          <Project
+            title="Move.it"
+            type="Website"
+            slug="teste"
+            imgUrl={breeze}
+          />
         </main>
       </ProjectsContainer>
     </>

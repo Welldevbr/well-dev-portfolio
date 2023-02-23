@@ -16,14 +16,9 @@ export function ProjectsSection() {
           img={breeze}
           title="Breeze-ask"
           type="Website"
-          slug="/projeto"
+          slug="/breeze"
         />
-        <ProjectItem
-          img={move}
-          title="Move.it"
-          type="Website"
-          slug="/projeto"
-        />
+        <ProjectItem img={move} title="Move.it" type="Website" slug="/slug" />
         <ProjectItem
           img={comics}
           title="Comics Marvel"

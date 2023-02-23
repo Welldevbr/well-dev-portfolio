@@ -25,7 +25,7 @@ export const Container = styled.div<ContainerProps>`
       border-color: ${({ theme }) => theme.primary};
       > section {
         h1 {
-          margin: 0 0 0.5rem;
+          margin: 0 0.5rem 0;
         }
       }
       > div.overlay {
