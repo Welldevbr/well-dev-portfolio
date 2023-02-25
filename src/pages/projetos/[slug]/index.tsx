@@ -1,13 +1,15 @@
-import { Banner } from '../../../components/Banner';
 import Header from '../../../components/Header';
 import { Container } from '../../../styles/ProjectOwnStyles';
-import breeze from '../../../assets/breeze.png';
+import breeze from '../../../assets/breeze-mockup.png';
+import BannerProject from '../../../components/BannerProject';
 
-export function Project() {
+export default function ProjectOwn() {
   return (
     <Container>
       <Header />
-      <Banner title="Breeze ask" type="Website" imgUrl={breeze} />
+      <div>
+        <BannerProject title="Breeze ask" type="Website" imgUrl={breeze} />
+      </div>
 
       <main>
         <p>

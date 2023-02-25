@@ -4,7 +4,7 @@ import { ProjectItem } from './ProjectItem';
 import { SectionTitle } from '../SectionTitle';
 
 import breeze from '../../assets/breeze.png';
-import move from '../../assets/move.png';
+import moveit from '../../assets/move.png';
 import comics from '../../assets/comics.png';
 
 export function ProjectsSection() {
@@ -14,20 +14,25 @@ export function ProjectsSection() {
       <section>
         <ProjectItem
           img={breeze}
-          title="Breeze-ask"
+          title="Breeze ask"
           type="Website"
-          slug="/breeze"
+          slug="breeze"
         />
-        <ProjectItem img={move} title="Move.it" type="Website" slug="/slug" />
+        <ProjectItem
+          img={moveit}
+          title="Move it"
+          type="Website"
+          slug="moveit"
+        />
         <ProjectItem
           img={comics}
           title="Comics Marvel"
           type="Website"
-          slug="/projeto"
+          slug="comics"
         />
       </section>
       <button type="button">
-        <Link href="/projects">
+        <Link href="/projetos">
           <a>Ver todos os projetos</a>
         </Link>
       </button>

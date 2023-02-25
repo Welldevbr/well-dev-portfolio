@@ -51,18 +51,20 @@ export const SkillContainer = styled.div`
   svg {
     width: 5rem;
     height: 5rem;
-    transition: 0.5s;
+    transition: all 0.5s ease-out;
   }
 
   &::before {
     content: '';
-    width: 0%;
+    width: 100%;
     height: 2px;
     background: ${({ theme }) => theme.primary};
     position: absolute;
     bottom: -15%;
     left: 0;
-    transition: 0.5s;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.5s ease-out;
   }
 
   &:hover {
@@ -72,11 +74,12 @@ export const SkillContainer = styled.div`
 
     svg {
       color: ${({ theme }) => theme.primary};
-      transform: scale(0.95);
+      transform: scale(0.85);
     }
 
     &::before {
-      width: 100%;
+      transform: scaleX(1);
+      transform-origin: bottom center;
     }
   }
 

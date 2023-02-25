@@ -28,9 +28,7 @@ export default function Header({ setMenuVisible }: HeaderProps) {
       <img draggable="false" src={logoImage} alt="logotipo" />
       <ul>
         <NavLink title="Home" path="/" />
-        <NavLink title="Sobre mim" path="/about" />
-        <NavLink title="Habilidades" path="/skills" />
-        <NavLink title="Projetos" path="/projects" />
+        <NavLink title="Projetos" path="/projetos" />
       </ul>
       <RiMenu3Fill size={40} onClick={() => setMenuVisible(true)} />
     </Container>
