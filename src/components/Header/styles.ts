@@ -1,4 +1,4 @@
-import { darken, lighten, rgba } from 'polished';
+import { darken, lighten } from 'polished';
 import styled from 'styled-components';
 
 interface NavProps {

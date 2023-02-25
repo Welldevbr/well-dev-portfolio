@@ -24,14 +24,14 @@ export const Container = styled.div`
 
 export const WorkContainer = styled.div`
   width: 100%;
-  height: 28rem;
+  height: 30rem;
   padding: 2rem;
   background: ${({ theme }) => theme.backgroundLight};
   color: ${({ theme }) => theme.text};
   display: flex;
   flex-direction: column;
   border: 2px solid ${({ theme }) => theme.secundary};
-  border-radius: 5px;
+  border-radius: 0.5rem;
   gap: 2rem;
   transition: 0.5s ease-in-out;
 
@@ -57,6 +57,7 @@ export const WorkContainer = styled.div`
 
   h1 {
     font-size: 2.5rem;
+    font-family: 'JetBrains', monospace;
   }
 
   p {

@@ -11,9 +11,21 @@ export const Container = styled.div`
     background: ${({ theme }) => theme.gradient};
     padding: 2rem 4rem;
     transition: 0.5s;
-
+    position: relative;
     margin-block: 6rem;
-    border-bottom: 3px solid ${({ theme }) => theme.primary};
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 0.3rem;
+      background: ${({ theme }) => theme.primary};
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: bottom center;
+      transition: transform 0.5s ease-out;
+    }
 
     img {
       width: 35rem;
@@ -53,7 +65,6 @@ export const Container = styled.div`
       p {
         font-size: 1.5rem;
         font-weight: 300;
-        line-height: 2rem;
       }
 
       header {
@@ -78,11 +89,11 @@ export const Container = styled.div`
         &::before,
         &::after {
           content: '';
-          height: 3px;
+          height: 0.2rem;
           position: absolute;
           left: 0;
           bottom: 0;
-          border-radius: 5px;
+          border-radius: 0.5rem;
         }
 
         &::before {
@@ -93,8 +104,8 @@ export const Container = styled.div`
 
         &::after {
           background: ${({ theme }) => theme.secundary};
-          width: 110%;
           z-index: 1;
+          width: 100%;
         }
 
         @media (max-width: 1450px) {
@@ -145,6 +156,11 @@ export const Container = styled.div`
 
     &:hover {
       filter: brightness(1.1);
+
+      &::before {
+        transform: scaleX(1);
+        transform-origin: bottom center;
+      }
     }
   }
 `;

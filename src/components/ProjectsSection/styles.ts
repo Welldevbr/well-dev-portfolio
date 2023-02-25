@@ -29,8 +29,13 @@ export const Container = styled.section`
     padding: 0.8rem 3rem;
     border-radius: 0.5rem;
     transition: 0.5s;
+    transform-origin: bottom center;
+    transform: scaleX(1);
+
     &:hover {
       background: ${({ theme }) => darken(0.09, theme.primary)};
+      transform-origin: bottom center;
+      transform: scaleX(1.1);
     }
     a {
       text-transform: uppercase;
@@ -142,7 +147,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
 
     &:hover {
       > section > div.text {
-        left: -12rem;
+        left: -15rem;
       }
     }
   }
