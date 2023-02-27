@@ -12,7 +12,6 @@ export const Container = styled.button`
     background: ${({ theme }) => darken(0.09, theme.primary)};
   }
   a {
-    text-transform: uppercase;
     color: #fff;
     font-size: 1.5rem;
     font-weight: 300;

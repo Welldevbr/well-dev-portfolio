@@ -1,3 +1,4 @@
+import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -17,10 +18,10 @@ export const Container = styled.div`
     &::before {
       content: '';
       width: 100%;
-      height: 0.3rem;
+      height: 0.2rem;
       background: ${({ theme }) => theme.primary};
       position: absolute;
-      bottom: 0;
+      bottom: -0.2rem;
       left: 0;
       transform: scaleX(0);
       transform-origin: bottom center;
@@ -45,6 +46,7 @@ export const Container = styled.div`
     }
 
     @media (max-width: 1000px) {
+      padding: 2.8rem 2rem;
       img {
         display: none;
       }
@@ -60,11 +62,11 @@ export const Container = styled.div`
       align-items: flex-start;
       flex-direction: column;
       gap: 2.8rem;
-      color: ${({ theme }) => theme.text};
+      color: ${({ theme }) => darken(0.09, theme.text)};
 
       p {
         font-size: 1.5rem;
-        font-weight: 300;
+        font-weight: 200;
       }
 
       header {
