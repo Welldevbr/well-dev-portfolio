@@ -14,9 +14,7 @@ export function MenuMobile({ menuVisible, setMenuVisible }: MenuProps) {
       <IoClose size={45} onClick={() => setMenuVisible(false)} />
       <nav>
         <NavLink title="Home" path="/" />
-        <NavLink title="Sobre mim" path="/about" />
-        <NavLink title="Habilidades" path="/skills" />
-        <NavLink title="Projetos" path="/projects" />
+        <NavLink title="Projetos" path="/projetos" />
       </nav>
     </Container>
   );
