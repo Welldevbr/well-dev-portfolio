@@ -46,12 +46,12 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
-          <link rel="ico" href="/assets/favicon.ico" type="image/png" />
+          <link rel="icon" href="%PUBLIC_URL%/favicon.ico" type="image/png" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Montserrat:wght@300;400;500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Poppins:wght@300;400;500;700&display=swap"
             rel="stylesheet"
           />
           <title>Well Dev</title>

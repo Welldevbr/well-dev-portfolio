@@ -11,7 +11,7 @@ export function SectionTitle({ title, description }: SectionTitleProps) {
   return (
     <Container>
       <h1>
-        <span>#</span>
+        <span># </span>
         {title}
       </h1>
       {description && <h2>{description}</h2>}

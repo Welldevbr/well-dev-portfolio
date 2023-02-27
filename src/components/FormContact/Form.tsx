@@ -6,7 +6,7 @@ export function Form() {
       <Input placeholder="Nome" required />
       <Input placeholder="E-mail" type="email" required />
       <TextArea placeholder="Menssagem" required />
-      <button type="submit">enviar</button>
+      <button type="submit">Enviar</button>
     </FormContainer>
   );
 }
