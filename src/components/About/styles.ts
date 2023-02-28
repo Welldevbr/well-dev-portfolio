@@ -7,7 +7,7 @@ export const Container = styled.div`
   > section {
     width: 100%;
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     align-items: center;
     background: ${({ theme }) => theme.gradient};
     padding: 2rem 4rem;
@@ -29,19 +29,21 @@ export const Container = styled.div`
     }
 
     img {
-      width: 35rem;
+      width: 36rem;
+      filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.text});
+      transition: 0.5s ease-out;
     }
 
     @media (max-width: 1450px) {
-      padding: 2rem;
+      padding: 4rem 2rem;
       img {
-        width: 26rem;
+        width: 30rem;
       }
     }
 
     @media (max-width: 1200px) {
       img {
-        width: 20rem;
+        width: 26rem;
       }
     }
 
@@ -157,7 +159,9 @@ export const Container = styled.div`
     }
 
     &:hover {
-      filter: brightness(1.1);
+      img {
+        filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.textHighlight});
+      }
 
       &::before {
         transform: scaleX(1);
