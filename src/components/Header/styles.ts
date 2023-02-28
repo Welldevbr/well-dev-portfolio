@@ -18,8 +18,9 @@ export const Container = styled.header<NavProps>`
   width: 100%;
   padding: 2rem 8rem;
 
-  background: rgba(0, 14, 27, 0.8);
-  backdrop-filter: blur(2rem);
+  background: ${props =>
+    props.isActive ? 'rgba(0, 14, 27, 0.8)' : 'trasparent'};
+  backdrop-filter: ${props => (props.isActive ? 'blur(2rem)' : 'none')};
   border-bottom: 1px solid
     ${props => (props.isActive ? props.theme.backgroundLight : 'trasparent')};
 
