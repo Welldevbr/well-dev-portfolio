@@ -6,7 +6,6 @@ import { SectionTitle } from '../SectionTitle';
 import breeze from '../../assets/breeze.png';
 import moveit from '../../assets/move.png';
 import comics from '../../assets/comics.png';
-import { Button } from '../Button';
 
 export function ProjectsSection() {
   return (
@@ -32,11 +31,11 @@ export function ProjectsSection() {
           slug="comics"
         />
       </section>
-      <Button type="button">
+      <button type="button">
         <Link href="/projetos">
           <a>Ver todos os Projetos</a>
         </Link>
-      </Button>
+      </button>
     </Container>
   );
 }
