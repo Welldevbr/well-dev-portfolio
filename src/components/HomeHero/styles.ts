@@ -6,7 +6,7 @@ export const Container = styled.section`
   justify-content: center;
   gap: 6rem;
   width: 100%;
-  margin-top: 8rem;
+  margin-block: 8rem;
   margin-inline: auto;
   position: relative;
   z-index: 1;
@@ -16,17 +16,34 @@ export const Container = styled.section`
   -ms-user-select: none;
   user-select: none;
 
-  &::before {
+  &::before,
+  &::after {
     content: '';
-    width: 12rem;
-    height: 6rem;
-    background: ${({ theme }) => theme.primary};
+    width: 20rem;
+    height: 20rem;
     position: absolute;
-    right: 0;
-    top: 30%;
-    z-index: -1;
-    filter: blur(10rem);
     transform: rotate(-35deg);
+    filter: blur(8rem);
+    border-radius: 0.8rem;
+    z-index: -1;
+  }
+
+  &::before {
+    width: 20rem;
+    height: 20rem;
+    background: ${({ theme }) => theme.primary};
+    right: 0;
+    top: 50%;
+    opacity: 0.5;
+  }
+
+  &::after {
+    width: 20rem;
+    height: 20rem;
+    background: ${({ theme }) => theme.textHighlight};
+    left: -8%;
+    top: 10%;
+    opacity: 0.75;
   }
 
   > img {
