@@ -30,7 +30,7 @@ export const Container = styled.div`
 
     img {
       width: 36rem;
-      filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.text});
+      filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.textHighlight});
       transition: 0.5s ease-out;
     }
 
@@ -160,7 +160,7 @@ export const Container = styled.div`
 
     &:hover {
       img {
-        filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.textHighlight});
+        filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.text});
       }
 
       &::before {
