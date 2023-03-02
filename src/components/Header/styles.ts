@@ -1,8 +1,9 @@
 import { darken } from 'polished';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface NavProps {
   isActive: boolean;
+  isVisible: boolean;
 }
 
 interface NavLinkProps {
@@ -17,7 +18,6 @@ export const Container = styled.header<NavProps>`
   z-index: 1000;
   width: 100%;
   padding: 2rem 8rem;
-
   background: ${props =>
     props.isActive ? 'rgba(0, 14, 27, 0.8)' : 'trasparent'};
   backdrop-filter: ${props => (props.isActive ? 'blur(2rem)' : 'none')};
@@ -32,6 +32,8 @@ export const Container = styled.header<NavProps>`
     display: flex;
     align-items: center;
     gap: 2.5rem;
+    transition: 0.5s ease-in-out;
+    position: relative;
   }
 
   svg {
@@ -57,7 +59,17 @@ export const Container = styled.header<NavProps>`
 
   @media (max-width: 1200px) {
     ul {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      right: -100%;
+
+      ${({ isVisible }) =>
+        isVisible &&
+        css`
+          opacity: 1;
+          right: 0;
+          visibility: visible;
+        `}
     }
     svg {
       display: block;
@@ -69,8 +81,21 @@ export const Container = styled.header<NavProps>`
   }
 
   @media (max-width: 700px) {
+    ul {
+      gap: 1rem;
+      ${({ isVisible }) =>
+        isVisible &&
+        css`
+          display: flex;
+        `}
+    }
     > img {
-      width: 10rem;
+      width: 8rem;
+    }
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: none;
     }
   }
 
@@ -110,6 +135,11 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     @media (max-width: 1450px) {
       padding: 0.25rem 2.5rem;
       font-size: 1.4rem;
+    }
+
+    @media (max-width: 700px) {
+      padding: 0.2rem 1.5rem;
+      font-size: 1rem;
     }
   }
 `;
