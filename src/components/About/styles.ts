@@ -31,6 +31,7 @@ export const Container = styled.div`
     img {
       width: 36rem;
       filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.textHighlight});
+      opacity: 0.8;
       transition: 0.5s ease-out;
     }
 
@@ -90,26 +91,16 @@ export const Container = styled.div`
           font-family: 'JetBrains Mono', monospace;
         }
 
-        &::before,
-        &::after {
+        &::before {
           content: '';
-          height: 0.2rem;
+          width: 100%;
+          height: 0.12rem;
+          background: ${({ theme }) => theme.secundary};
+          border-radius: 0.5rem;
           position: absolute;
           left: 0;
           bottom: 0;
-          border-radius: 0.5rem;
-        }
-
-        &::before {
-          background: ${({ theme }) => theme.primary};
-          width: 30%;
-          z-index: 12;
-        }
-
-        &::after {
-          background: ${({ theme }) => theme.secundary};
           z-index: 1;
-          width: 100%;
         }
 
         @media (max-width: 1450px) {

@@ -1,4 +1,3 @@
-import { darken } from 'polished';
 import styled from 'styled-components';
 
 interface ProjectProps {
@@ -21,33 +20,6 @@ export const Container = styled.section`
 
     @media (max-width: 1000px) {
       gap: 2rem;
-    }
-  }
-
-  > button {
-    background: ${({ theme }) => theme.primary};
-    padding: 0.8rem 3rem;
-    border-radius: 0.5rem;
-    transition: 0.5s;
-    transform-origin: bottom center;
-    transform: scaleX(1);
-
-    &:hover {
-      background: ${({ theme }) => darken(0.09, theme.primary)};
-      transform-origin: bottom center;
-      transform: scaleX(1.1);
-    }
-    a {
-      text-transform: uppercase;
-      color: #fff;
-      font-size: 1.5rem;
-      font-weight: 300;
-    }
-    @media (max-width: 500px) {
-      padding: 1rem;
-      a {
-        font-size: 1rem;
-      }
     }
   }
 `;

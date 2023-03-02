@@ -70,6 +70,12 @@ export const Container = styled.section`
     > img {
       width: 22rem;
     }
+
+    &::before,
+    &::after {
+      width: 15rem;
+      height: 15rem;
+    }
   }
 
   @media (max-width: 700px) {
@@ -78,6 +84,12 @@ export const Container = styled.section`
 
     > div {
       width: 100%;
+    }
+
+    &::before,
+    &::after {
+      width: 10rem;
+      height: 10rem;
     }
   }
 
