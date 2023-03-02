@@ -127,8 +127,8 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
       background: ${props =>
         props.isActive
           ? darken(0.2, props.theme.linkPrimary)
-          : props.theme.baseLink};
-      border: 1px solid
+          : darken(0.2, props.theme.baseLink)};
+      outline: 1px solid
         ${props => (props.isActive ? props.theme.primary : props.theme.text)};
     }
 

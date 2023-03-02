@@ -2,6 +2,7 @@ import Header from '../../../components/Header';
 import { Container } from '../../../styles/ProjectOwnStyles';
 import breeze from '../../../assets/breeze-mockup.png';
 import BannerProject from '../../../components/BannerProject';
+import { Button } from '../../../components/Button/Index';
 
 export default function ProjectOwn() {
   return (
@@ -18,9 +19,9 @@ export default function ProjectOwn() {
           ullam, praesentium nostrum saepe pariatur inventore exercitationem. Id
           hic eveniet molestiae? Ea.
         </p>
-        <button type="button">
+        <Button type="button">
           <a href="#">Ver projeto online</a>
-        </button>
+        </Button>
       </main>
     </Container>
   );

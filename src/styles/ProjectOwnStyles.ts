@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  gap: 2rem;
 
   > div {
     margin-top: 10rem;
@@ -15,5 +16,17 @@ export const Container = styled.div`
     margin-block: 2rem;
     width: 100%;
     padding: 0 5rem;
+
+    p {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 700px) {
+      p {
+        font-size: 1rem;
+      }
+    }
   }
 `;
