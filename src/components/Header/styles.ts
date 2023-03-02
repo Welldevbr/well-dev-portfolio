@@ -1,4 +1,4 @@
-import { darken, lighten } from 'polished';
+import { darken } from 'polished';
 import styled from 'styled-components';
 
 interface NavProps {
@@ -31,7 +31,7 @@ export const Container = styled.header<NavProps>`
   ul {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 2.5rem;
   }
 
   svg {
@@ -46,6 +46,9 @@ export const Container = styled.header<NavProps>`
   }
 
   @media (max-width: 1450px) {
+    ul {
+      gap: 1.5rem;
+    }
     padding: 2rem 4rem;
     > img {
       width: 12rem;
@@ -83,42 +86,29 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 3.5rem;
+    padding: 0.5rem 4rem;
     position: relative;
+    background: ${props => (props.isActive ? props.theme.linkPrimary : 'none')};
+    border-radius: 10rem;
     color: ${props =>
       props.isActive ? props.theme.primary : props.theme.text};
     transition: all 0.5s ease-in-out;
 
-    &::before {
-      content: '';
-      width: 100%;
-      height: 2px;
-      background: ${({ theme }) => theme.primary};
-      position: absolute;
-      transition: all 0.5s ease-in-out;
-      bottom: -30%;
-      left: 0;
-      transform: ${props => (props.isActive ? 'scaleX(1)' : 'scaleX(0)')};
-      transform-origin: bottom right;
-      transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-    }
-
     &:hover {
       color: ${props =>
         props.isActive
-          ? lighten(0.2, props.theme.primary)
+          ? darken(0.1, props.theme.primary)
           : darken(0.2, props.theme.text)};
-
-      &::before {
-        background: ${props =>
-          props.isActive
-            ? lighten(0.2, props.theme.primary)
-            : props.theme.primary};
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
+      background: ${props =>
+        props.isActive
+          ? darken(0.2, props.theme.linkPrimary)
+          : props.theme.baseLink};
+      border: 1px solid
+        ${props => (props.isActive ? props.theme.primary : props.theme.text)};
     }
 
     @media (max-width: 1450px) {
+      padding: 0.25rem 2.5rem;
       font-size: 1.4rem;
     }
   }
