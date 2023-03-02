@@ -14,10 +14,16 @@ export default function ProjectOwn() {
 
       <main>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
-          optio quibusdam quam porro iusto quo voluptatibus corrupti placeat
-          ullam, praesentium nostrum saepe pariatur inventore exercitationem. Id
-          hic eveniet molestiae? Ea.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+          consequuntur, asperiores voluptates hic aut mollitia alias libero
+          error explicabo quae quo accusantium laboriosam perferendis corporis
+          vitae incidunt sint maiores, consequatur facilis inventore! Nihil
+          perferendis vitae non alias ratione voluptate, cupiditate itaque ipsum
+          quam tempore cumque ea totam tempora neque hic, laboriosam at sed
+          natus magnam eos tenetur quia sint voluptates. Cupiditate numquam
+          consectetur eveniet accusamus iusto molestiae deleniti iure, debitis
+          veritatis laboriosam neque placeat amet tenetur ab necessitatibus,
+          quaerat labore?
         </p>
         <Button type="button">
           <a href="#">Ver projeto online</a>
