@@ -7,9 +7,7 @@ interface BannerProps {
 export const Container = styled.div<BannerProps>`
   display: flex;
   width: 100%;
-  height: 26rem;
-  background: url(${props => props.imgUrl}) no-repeat bottom;
-  background-size: cover;
+  height: 20rem;
   padding: 3rem 5rem;
   display: flex;
   align-items: flex-end;
@@ -38,14 +36,10 @@ export const Container = styled.div<BannerProps>`
     }
   }
 
-  > div.overlay {
+  > div {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: ${({ theme }) => theme.gradient};
-    opacity: 0.75;
-    transition: 0.5s;
+    object-fit: contain;
   }
 `;

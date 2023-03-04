@@ -21,4 +21,9 @@ export const ProjectsContainer = styled.div`
       grid-template-columns: 1fr;
     }
   }
+
+  > div {
+    margin-bottom: 5rem;
+    width: 100%;
+  }
 `;

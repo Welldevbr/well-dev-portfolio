@@ -118,12 +118,14 @@ export const Container = styled.div`
         }
 
         @media (max-width: 1000px) {
-          h1 {
-            font-size: 2.4rem;
-          }
+          > header {
+            h1 {
+              font-size: 2.4rem;
+            }
 
-          h2 {
-            font-size: 1.2rem;
+            h2 {
+              font-size: 1.2rem;
+            }
           }
         }
       }
@@ -135,16 +137,17 @@ export const Container = styled.div`
       }
 
       @media (max-width: 700px) {
-        h1 {
-          font-size: 1.5rem;
-        }
+        > header {
+          h1 {
+            font-size: 2rem;
+          }
 
-        h2 {
-          font-size: 1rem;
-        }
-        p {
-          font-size: 1rem;
-          line-height: 2rem;
+          h2 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 1rem;
+          }
         }
       }
     }

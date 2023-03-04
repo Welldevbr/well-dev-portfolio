@@ -99,9 +99,29 @@ export const Container = styled.header<NavProps>`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     > img {
-      width: 8rem;
+      width: 6rem;
+    }
+
+    svg {
+      position: relative;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    ul {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      background: ${({ theme }) => theme.gradient};
+      backdrop-filter: blur(12px);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
   }
 `;
@@ -140,6 +160,11 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     @media (max-width: 700px) {
       padding: 0.2rem 1.5rem;
       font-size: 1rem;
+    }
+
+    @media (max-width: 450px) {
+      padding: 0.2rem 2.5rem;
+      font-size: 1.2rem;
     }
   }
 `;

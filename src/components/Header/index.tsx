@@ -4,8 +4,6 @@ import { IoClose } from 'react-icons/io5';
 import { NavLink } from './NavLink';
 import { Container } from './styles';
 import logoImage from '../../assets/Logo.png';
-// import { GrHomeRounded } from 'react-icons/gr';
-// import { MdOutlineSpaceDashboard } from 'react-icons/md';
 
 export default function Header() {
   const [navbar, setNavbar] = useState(false);
