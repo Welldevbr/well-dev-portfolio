@@ -7,12 +7,25 @@ interface BannerProps {
 export const Container = styled.div<BannerProps>`
   display: flex;
   width: 100%;
-  height: 20rem;
-  padding: 3rem 5rem;
+  height: 26rem;
+  background: url(${props => props.imgUrl}) no-repeat center;
+  background-size: cover;
+  padding: 2rem 4rem;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   position: relative;
+
+  > div.overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: ${({ theme }) => theme.gradient};
+    opacity: 0.75;
+    transition: 0.5s;
+  }
 
   > section {
     z-index: 2;
@@ -34,12 +47,5 @@ export const Container = styled.div<BannerProps>`
       padding: 0 0.5rem;
       transition: 0.5s;
     }
-  }
-
-  > div {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    object-fit: contain;
   }
 `;
