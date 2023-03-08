@@ -22,6 +22,10 @@ export const Container = styled.section`
       gap: 2rem;
     }
   }
+
+  @media (max-width: 700px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const ProjectContainer = styled.div<ProjectProps>`

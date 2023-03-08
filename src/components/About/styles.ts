@@ -58,6 +58,7 @@ export const Container = styled.div`
     @media (max-width: 700px) {
       flex-direction: column;
       margin-top: 5rem;
+      margin-bottom: 0;
     }
 
     > div {
@@ -137,6 +138,9 @@ export const Container = styled.div`
       }
 
       @media (max-width: 700px) {
+        p {
+          font-size: 1rem;
+        }
         > header {
           h1 {
             font-size: 2rem;
@@ -144,9 +148,6 @@ export const Container = styled.div`
 
           h2 {
             font-size: 1.2rem;
-          }
-          p {
-            font-size: 1rem;
           }
         }
       }

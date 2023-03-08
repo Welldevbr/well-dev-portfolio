@@ -10,6 +10,10 @@ export const Container = styled.footer`
   margin-top: 8rem;
   border-top: 1px solid ${({ theme }) => theme.backgroundLight};
 
+  @media (max-width: 450px) {
+    margin-top: 6rem;
+  }
+
   > div {
     display: flex;
     align-items: center;

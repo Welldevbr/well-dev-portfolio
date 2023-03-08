@@ -7,23 +7,17 @@ export const Container = styled.div`
   > section {
     margin-top: 8rem;
     width: 100%;
-    display: grid;
-    gap: 6rem;
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  @media (max-width: 1450px) {
-    > section {
-      grid-template-columns: repeat(4, 1fr);
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    flex-wrap: wrap;
   }
 
   @media (max-width: 700px) {
+    margin-bottom: 2rem;
+
     > section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
       gap: 4rem;
     }
   }

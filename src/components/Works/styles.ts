@@ -1,4 +1,4 @@
-import { lighten } from 'polished';
+import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -20,13 +20,17 @@ export const Container = styled.div`
       flex-direction: column;
     }
   }
+
+  @media (max-width: 700px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const WorkContainer = styled.div`
   width: 100%;
   height: 30rem;
   padding: 2rem;
-  background: ${({ theme }) => theme.backgroundLight};
+  background: ${({ theme }) => darken(0.2, theme.linkPrimary)};
   color: ${({ theme }) => theme.text};
   display: flex;
   flex-direction: column;
@@ -36,12 +40,12 @@ export const WorkContainer = styled.div`
   transition: 0.5s ease-in-out;
 
   &:hover {
-    background: ${({ theme }) => lighten(0.02, theme.backgroundLight)};
+    background: ${({ theme }) => darken(0.2, theme.linkPrimary)};
     border: 2px solid ${({ theme }) => theme.primary};
   }
 
   div {
-    background: ${({ theme }) => theme.secundary};
+    background: ${({ theme }) => darken(0.2, theme.linkPrimary)};
     width: 6rem;
     height: 6rem;
     clip-path: circle();

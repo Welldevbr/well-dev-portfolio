@@ -95,6 +95,7 @@ export const Container = styled.section`
 
   @media (max-width: 420px) {
     margin-top: 8rem;
+    margin-bottom: 0;
   }
 `;
 
