@@ -19,7 +19,7 @@ import {
   SiNextdotjs
 } from 'react-icons/si';
 import { SectionTitle } from '../SectionTitle';
-import { SkillItem } from './SkillItem';
+import { SkillItem } from '../SkillItem';
 import { Container } from './styles';
 
 export function Skills() {

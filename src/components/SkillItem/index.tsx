@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { SkillContainer } from './styles';
+import { Container } from './styles';
 
 interface SkillItemProps {
   title: string;
@@ -8,9 +8,9 @@ interface SkillItemProps {
 
 export function SkillItem({ title, icon }: SkillItemProps) {
   return (
-    <SkillContainer>
+    <Container>
       <p>{title}</p>
       {icon}
-    </SkillContainer>
+    </Container>
   );
 }

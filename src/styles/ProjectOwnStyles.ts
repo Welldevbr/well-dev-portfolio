@@ -7,23 +7,28 @@ export const Container = styled.div`
   height: 100%;
   gap: 2rem;
 
-  > div {
-    margin-top: 8rem;
-    width: 100%;
-  }
-
   > main {
     margin-block: 2rem;
     width: 100%;
-    padding: 0 12rem;
+    padding: 0 4rem;
     display: flex;
     flex-direction: column;
 
-    p {
+    > div {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    > p {
       font-size: 1.5rem;
       color: #fff;
       margin-bottom: 4rem;
       text-align: justify;
+
+      > strong {
+        color: ${({ theme }) => theme.textHighlight};
+      }
     }
 
     > section {
@@ -31,23 +36,67 @@ export const Container = styled.div`
       margin-bottom: 6rem;
       display: flex;
       justify-content: space-between;
+    }
 
-      span {
-        display: flex;
+    @media (max-width: 1450px) {
+      p {
+        font-size: 1rem;
+      }
+
+      > section {
         flex-direction: column;
-
-        h1 {
-          color: ${({ theme }) => theme.primary};
-          font-size: 2.5rem;
-          font-weight: 600;
-        }
+        gap: 10rem;
       }
     }
 
     @media (max-width: 700px) {
-      p {
-        font-size: 1rem;
+      padding: 0 2rem;
+
+      > div {
+        flex-direction: column;
       }
+
+      > p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+`;
+
+export const SkillsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  > h1 {
+    color: ${({ theme }) => theme.primary};
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  span {
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  @media (max-width: 1450px) {
+    > span {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 700px) {
+    > span {
+      width: 100%;
+    }
+    h1 {
+      font-size: 1.8rem;
+      width: 70%;
     }
   }
 `;

@@ -48,4 +48,29 @@ export const Container = styled.div<BannerProps>`
       transition: 0.5s;
     }
   }
+
+  @media (max-width: 1000px) {
+    height: 20rem;
+    > section {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    height: 15rem;
+    padding: 2rem;
+    > section {
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
 `;
