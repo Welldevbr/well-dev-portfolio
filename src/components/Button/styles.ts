@@ -22,6 +22,7 @@ export const Container = styled.button<ButtonType>`
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
   }
 
   ${({ isOutlined }) =>
@@ -32,8 +33,11 @@ export const Container = styled.button<ButtonType>`
 
       a {
         color: ${({ theme }) => theme.primary};
-        gap: 2rem;
         transition: 0.5s ease-out;
+
+        > svg {
+          width: 4rem;
+        }
       }
 
       &:hover {
@@ -41,16 +45,6 @@ export const Container = styled.button<ButtonType>`
 
         a {
           color: #fff;
-
-          > svg {
-            width: 4rem;
-          }
-        }
-      }
-
-      @media (max-width: 1000px) {
-        a {
-          gap: 1rem;
         }
       }
     `}
@@ -59,6 +53,9 @@ export const Container = styled.button<ButtonType>`
     width: 60%;
     a {
       font-size: 1rem;
+      a {
+        gap: 1rem;
+      }
     }
   }
 

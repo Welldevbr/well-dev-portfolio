@@ -1,8 +1,5 @@
-import {
-  RiQuillPenLine,
-  RiTerminalLine,
-  RiPencilRuler2Line
-} from 'react-icons/ri';
+import { RiQuillPenLine, RiTerminalLine } from 'react-icons/ri';
+import { MdAutoFixHigh } from 'react-icons/md';
 import { SectionTitle } from '../SectionTitle';
 import { Container } from './styles';
 import { WorkItem } from './WorkItem';
@@ -31,7 +28,7 @@ export function Works() {
           title="Design Gráfico"
           description="Trabalho também com confexão de conteúdos digitais, desde logos, banners até a criação de identidades visuais completas"
         >
-          <RiPencilRuler2Line />
+          <MdAutoFixHigh />
         </WorkItem>
       </section>
     </Container>

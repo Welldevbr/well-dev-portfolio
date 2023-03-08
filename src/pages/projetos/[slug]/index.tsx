@@ -11,15 +11,26 @@ import Header from '../../../components/Header';
 import { Container, SkillsContainer } from '../../../styles/ProjectOwnStyles';
 import BannerProject from '../../../components/BannerProject';
 import { Button } from '../../../components/Button/Index';
-import breezePage from '../../../assets/BreezePage.png';
+
+import breezePage from '../../../assets/images/BreezePage.png';
+import SalaQA from '../../../assets/images/SalaQ&A.png';
+import SalaReact from '../../../assets/images/Sala-React.png';
+import SalaEmpty from '../../../assets/images/SalaEmpty.png';
+import SalaRespondida from '../../../assets/images/SalaRespondida.png';
+import SalaEncerrar from '../../../assets/images/SalaEncerrar.png';
+import SalaExcluída from '../../../assets/images/SalaExcluída.png';
+import SalaExcluir from '../../../assets/images/SalaExcluir.png';
 import breeze from '../../../assets/breeze-mockup.png';
-import SalaAdm from '../../../assets/Sala-Q&A.png';
-import SalaReact from '../../../assets/Sala-React.png';
-import { Slider } from '../../../components/Slider';
+
+import { SliderProject } from '../../../components/SliderProject';
 import { SkillItem } from '../../../components/SkillItem';
 import { Footer } from '../../../components/Footer';
 
 export default function ProjectOwn() {
+  function handleRedirect(url: string) {
+    window.open(url, '_blank');
+  }
+
   return (
     <>
       <Header />
@@ -49,18 +60,32 @@ export default function ProjectOwn() {
                 <SkillItem title="Firebase" icon={<SiFirebase />} />
               </span>
             </SkillsContainer>
-            <Slider
-              primary={breezePage}
-              secondary={SalaReact}
-              terciary={SalaAdm}
+            <SliderProject
+              first={breezePage}
+              second={SalaEmpty}
+              third={SalaEncerrar}
+              fourth={SalaReact}
+              fifth={SalaQA}
+              sixth={SalaExcluir}
+              seventh={SalaExcluída}
+              eighth={SalaRespondida}
             />
           </section>
 
           <div>
-            <Button type="button">
+            <Button
+              onClick={() => handleRedirect('https://breeze-ask.web.app/')}
+              type="button"
+            >
               <a href="#">Ver projeto online</a>
             </Button>
-            <Button isOutlined type="button">
+            <Button
+              onClick={() =>
+                handleRedirect('https://github.com/Welldevbr/breeze-ask')
+              }
+              isOutlined
+              type="button"
+            >
               <a href="#">
                 Ver repositorio <SiGithub />
               </a>

@@ -75,7 +75,6 @@ export const ProjectContainer = styled.div<ProjectProps>`
     background: url(${props => props.imgUtl}) no-repeat center;
     background-size: cover;
     position: relative;
-    cursor: pointer;
 
     > div.overlay {
       position: absolute;

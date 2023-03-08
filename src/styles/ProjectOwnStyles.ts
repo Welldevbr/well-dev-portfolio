@@ -35,10 +35,11 @@ export const Container = styled.div`
       margin-top: 2rem;
       margin-bottom: 6rem;
       display: flex;
+      align-items: center;
       justify-content: space-between;
     }
 
-    @media (max-width: 1450px) {
+    @media (max-width: 1200px) {
       p {
         font-size: 1rem;
       }
@@ -66,7 +67,7 @@ export const Container = styled.div`
 export const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 
   > h1 {
     color: ${({ theme }) => theme.primary};
@@ -83,9 +84,9 @@ export const SkillsContainer = styled.div`
     gap: 4rem;
   }
 
-  @media (max-width: 1450px) {
+  @media (max-width: 1200px) {
     > span {
-      width: 70%;
+      width: 100%;
       margin: 0 auto;
     }
   }

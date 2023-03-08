@@ -45,9 +45,10 @@ export const WorkContainer = styled.div`
   }
 
   div {
-    background: ${({ theme }) => darken(0.2, theme.linkPrimary)};
-    width: 6rem;
+    background: ${({ theme }) => darken(0.1, theme.linkPrimary)};
+    width: 8rem;
     height: 6rem;
+    padding: 1rem;
     clip-path: circle();
     display: flex;
     align-items: center;
