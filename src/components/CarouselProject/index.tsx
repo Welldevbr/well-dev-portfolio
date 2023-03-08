@@ -1,44 +1,36 @@
-import Slider from 'react-slick';
-import { Container } from './styles';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import CapaMove from '../../assets/CapaMoveit.png';
-import BreezeCover from '../../assets/breeze-mokup.png';
-import CapaOriginSix from '../../assets/CapaOriginSix.png';
-import ComicsCover from '../../assets/ComicsCover.png';
-import CoverHabits from '../../assets/CoverHabits.png';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { useSnapCarousel } from 'react-snap-carousel';
 
-export function CarouselProject() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1
-  };
-
+const CarouselProject = () => {
+  const { scrollRef } = useSnapCarousel();
   return (
-    <Container>
-      <Slider {...settings}>
-        <div>
-          <img src={CapaMove} alt="" />
-        </div>
-        <div>
-          <img src={BreezeCover} alt="" />
-        </div>
-        <div>
-          <img src={CapaOriginSix} alt="" />
-        </div>
-        <div>
-          <img src={ComicsCover} alt="" />
-        </div>
-        <div>
-          <img src={CoverHabits} alt="" />
-        </div>
-        <div>
-          <img src={CapaOriginSix} alt="" />
-        </div>
-      </Slider>
-    </Container>
+    <ul
+      ref={scrollRef}
+      style={{
+        display: 'flex',
+        overflow: 'auto',
+        scrollSnapType: 'x mandatory'
+      }}
+    >
+      {Array.from({ length: 100 }).map((_, i) => (
+        <li
+          style={{
+            backgroundColor: 'aqua',
+            fontSize: '50px',
+            width: '250px',
+            height: '250px',
+            flexShrink: 0,
+            color: '#fff',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        >
+          Item {i}
+        </li>
+      ))}
+    </ul>
   );
-}
+};
+
+export default CarouselProject;
