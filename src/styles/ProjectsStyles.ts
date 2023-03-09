@@ -5,22 +5,24 @@ export const ProjectsContainer = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding-top: 8rem;
+  padding-top: 10rem;
 
   > main {
+    h1 {
+      color: ${({ theme }) => theme.text};
+      font-size: 2rem;
+
+      span {
+        color: ${({ theme }) => theme.primary};
+      }
+    }
     > section {
-      margin-block: 5rem;
+      margin-top: 2rem;
+      margin-bottom: 6rem;
       width: 100%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
-
-      @media (max-width: 1000px) {
-        grid-template-columns: 1fr 1fr;
-      }
-      @media (max-width: 550px) {
-        grid-template-columns: 1fr;
-      }
     }
 
     > div {
@@ -30,9 +32,20 @@ export const ProjectsContainer = styled.div`
       flex-direction: column;
       align-items: flex-start;
       gap: 2rem;
+    }
 
+    @media (max-width: 1000px) {
+      > sction {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
       h1 {
-        color: ${({ theme }) => theme.text};
+        font-size: 1.8rem;
+      }
+      > sction {
+        grid-template-columns: 1fr;
       }
     }
   }

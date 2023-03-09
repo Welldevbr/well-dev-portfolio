@@ -5,6 +5,7 @@ import breeze from '../../assets/breeze.png';
 import comics from '../../assets/comics.png';
 import moveit from '../../assets/move.png';
 import { CarouselProject } from '../../components/CarouselProject';
+import { Footer } from '../../components/Footer';
 
 export default function Projetos() {
   return (
@@ -12,6 +13,9 @@ export default function Projetos() {
       <Header />
       <ProjectsContainer>
         <main className="container">
+          <h1>
+            <span>#</span> Destaques
+          </h1>
           <section>
             <Project
               title="Breeze ask"
@@ -37,6 +41,7 @@ export default function Projetos() {
             <CarouselProject />
           </div>
         </main>
+        <Footer />
       </ProjectsContainer>
     </>
   );
