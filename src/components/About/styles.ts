@@ -14,12 +14,14 @@ export const Container = styled.div`
     transition: 0.5s;
     position: relative;
     margin-block: 6rem;
+    border-radius: 0.5rem 0.5rem 0 0;
 
     &::before {
       content: '';
       width: 100%;
       height: 0.2rem;
       background: ${({ theme }) => theme.primary};
+      border-radius: 0 0 0.5rem 0.5rem;
       position: absolute;
       bottom: -0.2rem;
       left: 0;
@@ -29,16 +31,16 @@ export const Container = styled.div`
     }
 
     img {
-      width: 36rem;
+      width: 35rem;
       filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.textHighlight});
       opacity: 0.8;
       transition: 0.5s ease-out;
     }
 
     @media (max-width: 1450px) {
-      padding: 4rem 2rem;
+      padding: 4rem 3rem;
       img {
-        width: 30rem;
+        width: 28rem;
       }
     }
 

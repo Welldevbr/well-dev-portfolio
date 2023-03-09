@@ -135,15 +135,12 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     position: relative;
     background: ${props => (props.isActive ? props.theme.linkPrimary : 'none')};
     border-radius: 10rem;
-    color: ${props =>
-      props.isActive ? props.theme.primary : props.theme.text};
+    color: ${props => props.theme.text};
     transition: all 0.5s ease-in-out;
 
     &:hover {
       color: ${props =>
-        props.isActive
-          ? darken(0.1, props.theme.primary)
-          : darken(0.2, props.theme.text)};
+        props.isActive ? props.theme.primary : darken(0.2, props.theme.text)};
       background: ${props =>
         props.isActive
           ? darken(0.2, props.theme.linkPrimary)
