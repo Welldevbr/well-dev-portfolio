@@ -35,7 +35,7 @@ export const ProjectsContainer = styled.div`
     }
 
     @media (max-width: 1000px) {
-      > sction {
+      > section {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -44,7 +44,7 @@ export const ProjectsContainer = styled.div`
       h1 {
         font-size: 1.8rem;
       }
-      > sction {
+      > section {
         grid-template-columns: 1fr;
       }
     }
