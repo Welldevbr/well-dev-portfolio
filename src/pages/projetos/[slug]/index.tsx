@@ -12,7 +12,7 @@ import { Container, SkillsContainer } from '../../../styles/ProjectOwnStyles';
 import BannerProject from '../../../components/BannerProject';
 import { Button } from '../../../components/Button/Index';
 
-import breezePage from '../../../assets/images/BreezePage.png';
+import breezePage from '../../../assets/images/BreezeAsk.png';
 import SalaQA from '../../../assets/images/SalaQ&A.png';
 import SalaReact from '../../../assets/images/Sala-React.png';
 import SalaEmpty from '../../../assets/images/SalaEmpty.png';
@@ -20,7 +20,7 @@ import SalaRespondida from '../../../assets/images/SalaRespondida.png';
 import SalaEncerrar from '../../../assets/images/SalaEncerrar.png';
 import SalaExcluída from '../../../assets/images/SalaExcluída.png';
 import SalaExcluir from '../../../assets/images/SalaExcluir.png';
-import breeze from '../../../assets/breeze-mockup.png';
+import breezeImg from '../../../assets/breezeCover.png';
 
 import { SliderProject } from '../../../components/SliderProject';
 import { SkillItem } from '../../../components/SkillItem';
@@ -36,7 +36,7 @@ export default function ProjectOwn() {
       <Header />
       <Container>
         <div>
-          <BannerProject title="Breeze ask" type="Website" imgUrl={breeze} />
+          <BannerProject title="Breeze ask" type="Website" imgUrl={breezeImg} />
         </div>
 
         <main>
