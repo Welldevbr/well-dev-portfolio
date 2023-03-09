@@ -20,8 +20,8 @@ export const Container = styled.div`
   }
 
   svg {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     transition: all 0.5s ease-out;
   }
 
@@ -60,15 +60,15 @@ export const Container = styled.div`
     }
 
     svg {
-      width: 4rem;
-      height: 4rem;
+      width: 3.5rem;
+      height: 3.5rem;
     }
   }
 
   @media (max-width: 700px) {
     svg {
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 3rem;
+      height: 3rem;
     }
   }
 `;
