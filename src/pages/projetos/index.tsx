@@ -1,13 +1,11 @@
 import Header from '../../components/Header';
 import { Project } from '../../components/Project';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
-import breeze from '../../assets/breeze.png';
-import comics from '../../assets/comics.png';
-import moveit from '../../assets/move.png';
 import { CarouselProject } from '../../components/CarouselProject';
 import { Footer } from '../../components/Footer';
+import { getAllProjects } from '../../lib/dato-cms';
 
-export default function Projetos() {
+export default function Projetos({ projects }) {
   return (
     <>
       <Header />
@@ -17,32 +15,33 @@ export default function Projetos() {
             <span>#</span> Destaques
           </h1>
           <section>
-            <Project
-              title="Breeze ask"
-              type="Website"
-              slug="breeze"
-              imgUrl={breeze}
-            />
-            <Project
-              title="Comics Marvel"
-              type="Website"
-              slug="comics"
-              imgUrl={comics}
-            />
-            <Project
-              title="Move.it"
-              type="Website"
-              slug="moveit"
-              imgUrl={moveit}
-            />
+            {projects &&
+              projects
+                .slice(0, 3)
+                .map(project => (
+                  <Project
+                    title={project.title}
+                    type={project.typeProject}
+                    slug={project.id}
+                    imgUrl={project.thumbnail.url}
+                  />
+                ))}
           </section>
           <div>
             <h1> Projetos recentes </h1>
-            <CarouselProject />
+            <CarouselProject projects={projects} />
           </div>
         </main>
         <Footer />
       </ProjectsContainer>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const projects = await getAllProjects();
+  return {
+    props: { projects },
+    revalidate: 120
+  };
 }

@@ -3,14 +3,9 @@ import Slider from 'react-slick';
 import { Container } from './styles';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import CapaMove from '../../assets/CapaMoveit.png';
-import BreezeCover from '../../assets/breeze-mokup.png';
-import CapaOriginSix from '../../assets/CapaOriginSix.png';
-import ComicsCover from '../../assets/ComicsCover.png';
-import CoverHabits from '../../assets/CoverHabits.png';
 import { CarouselItem } from '../CarouselItem';
 
-export function CarouselProject() {
+export function CarouselProject({ projects }) {
   const [width, setWidth] = useState(0);
 
   const handleWindowResize = () => {
@@ -36,11 +31,10 @@ export function CarouselProject() {
   return (
     <Container>
       <Slider {...settings}>
-        <CarouselItem imgUrl={CapaMove} slug="breeze" />
-        <CarouselItem imgUrl={BreezeCover} slug="breeze" />
-        <CarouselItem imgUrl={CapaOriginSix} slug="breeze" />
-        <CarouselItem imgUrl={ComicsCover} slug="breeze" />
-        <CarouselItem imgUrl={CoverHabits} slug="breeze" />
+        {projects &&
+          projects.map(project => (
+            <CarouselItem imgUrl={project.thumbnail.url} slug={project.id} />
+          ))}
       </Slider>
     </Container>
   );
