@@ -9,14 +9,14 @@ import {
 
 import Header from '../../../components/Header';
 
-import breezePage from '../../../assets/images/BreezeAsk.png';
-import SalaQA from '../../../assets/images/SalaQ&A.png';
-import SalaReact from '../../../assets/images/Sala-React.png';
-import SalaEmpty from '../../../assets/images/SalaEmpty.png';
-import SalaRespondida from '../../../assets/images/SalaRespondida.png';
-import SalaEncerrar from '../../../assets/images/SalaEncerrar.png';
-import SalaExcluída from '../../../assets/images/SalaExcluída.png';
-import SalaExcluir from '../../../assets/images/SalaExcluir.png';
+import breezePage from '../../../assets/breeze-imgs/BreezeAsk.png';
+import SalaQA from '../../../assets/breeze-imgs/SalaQ&A.png';
+import SalaReact from '../../../assets/breeze-imgs/Sala-React.png';
+import SalaEmpty from '../../../assets/breeze-imgs/SalaEmpty.png';
+import SalaRespondida from '../../../assets/breeze-imgs/SalaRespondida.png';
+import SalaEncerrar from '../../../assets/breeze-imgs/SalaEncerrar.png';
+import SalaExcluída from '../../../assets/breeze-imgs/SalaExcluída.png';
+import SalaExcluir from '../../../assets/breeze-imgs/SalaExcluir.png';
 import breezeImg from '../../../assets/breezeCover.png';
 import { SkillItem } from '../../../components/SkillItem';
 import { Footer } from '../../../components/Footer';

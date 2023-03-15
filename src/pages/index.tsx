@@ -7,8 +7,9 @@ import { Works } from '../components/Works';
 import { Skills } from '../components/Skills';
 import { FormContact } from '../components/FormContact';
 import { Footer } from '../components/Footer';
+import { getAllProjects } from '../lib/dato-cms';
 
-export default function Home() {
+export default function Home({ projects }) {
   return (
     <>
       <HomeContainer>
@@ -17,7 +18,7 @@ export default function Home() {
         <main className="container">
           <HomeHero />
           <About />
-          <ProjectsSection />
+          <ProjectsSection projects={projects} />
           <Works />
           <Skills />
           <FormContact />
@@ -27,4 +28,12 @@ export default function Home() {
       </HomeContainer>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const projects = await getAllProjects();
+  return {
+    props: { projects },
+    revalidate: 120
+  };
 }

@@ -1,4 +1,4 @@
-import { darken, lighten } from 'polished';
+import { darken } from 'polished';
 import styled, { css } from 'styled-components';
 
 interface ButtonType {
@@ -11,30 +11,9 @@ export const Container = styled.button<ButtonType>`
   border-radius: 0.5rem;
   transition: 0.5s ease-out;
   width: 40%;
-  position: relative;
-  z-index: 2;
-
-  &::before {
-    content: '';
-    width: 100%;
-    height: 80%;
-    border-radius: 100%;
-    background: ${({ theme }) => lighten(0.2, theme.linkPrimary)};
-    filter: blur(0.5rem);
-    position: absolute;
-    bottom: -20%;
-    left: 0;
-    z-index: 1;
-    opacity: 0;
-    transition: 0.5s ease-out;
-  }
 
   &:hover {
-    background: ${({ theme }) => darken(0.09, theme.primary)};
-
-    &::before {
-      opacity: 0.9;
-    }
+    background: ${({ theme }) => darken(0.15, theme.primary)};
   }
   a {
     color: #fff;
