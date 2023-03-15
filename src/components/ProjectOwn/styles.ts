@@ -67,7 +67,8 @@ export const Container = styled.div`
 export const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 6rem;
+  align-items: flex-start;
 
   > h1 {
     color: ${({ theme }) => theme.primary};
@@ -78,10 +79,44 @@ export const SkillsContainer = styled.div`
   span {
     width: 80%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 2rem;
+
+    p {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-family: 'JetBreans mono', monospace;
+      color: ${({ theme }) => theme.text};
+      background: ${({ theme }) => theme.linkPrimary};
+      position: relative;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 0.15rem;
+        background: ${({ theme }) => theme.primary};
+        border-radius: 0 0 0.5rem 0.5rem;
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: bottom center;
+        transition: transform 0.5s ease-out;
+      }
+
+      &:hover {
+        color: ${({ theme }) => theme.primary};
+
+        &::before {
+          transform: scaleX(1);
+          transform-origin: bottom center;
+        }
+      }
+    }
   }
 
   @media (max-width: 1200px) {
@@ -94,6 +129,11 @@ export const SkillsContainer = styled.div`
   @media (max-width: 700px) {
     > span {
       width: 100%;
+
+      p {
+        padding: 0.5rem 1.8rem;
+        font-size: 1.2rem;
+      }
     }
     h1 {
       font-size: 1.8rem;

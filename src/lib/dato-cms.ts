@@ -28,9 +28,17 @@ const MY_QUERY = `
     id
     title
     typeProject
+    description
     link
+    repo
     thumbnail {
       url
+    }
+    gallery {
+      url
+    }
+    tags {
+      title
     }
   }
 }

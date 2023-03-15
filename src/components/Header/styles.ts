@@ -87,6 +87,7 @@ export const Container = styled.header<NavProps>`
         isVisible &&
         css`
           display: flex;
+          overflow: hidden;
         `}
     }
     > img {
@@ -99,7 +100,7 @@ export const Container = styled.header<NavProps>`
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 550px) {
     > img {
       width: 6rem;
     }
@@ -108,6 +109,7 @@ export const Container = styled.header<NavProps>`
       position: relative;
       width: 1.5rem;
       height: 1.5rem;
+      z-index: 999999;
     }
 
     ul {
@@ -115,9 +117,8 @@ export const Container = styled.header<NavProps>`
       height: 100vh;
       position: absolute;
       top: 0;
-      background: ${({ theme }) => theme.gradient};
-      backdrop-filter: blur(12px);
-
+      z-index: 999999;
+      background: ${({ theme }) => theme.secundary};
       display: flex;
       align-items: center;
       justify-content: center;

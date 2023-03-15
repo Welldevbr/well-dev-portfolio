@@ -36,7 +36,7 @@ export function Footer() {
           />
           <AiOutlineInstagram
             onClick={() =>
-              handleRedirect('https://www.instagram.com/@well.dev.tsx')
+              handleRedirect('https://www.instagram.com/welldevbr/')
             }
           />
         </section>

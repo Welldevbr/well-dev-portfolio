@@ -12,8 +12,12 @@ interface ProjectOwnProps {
   type: string;
   description: ReactNode;
   bannerImg: string;
-  skillsItens: ReactNode;
-  imgsUrls: Array<string>;
+  skillsItens: {
+    title: string;
+  }[];
+  imgsUrls: {
+    url: string;
+  }[];
   demoLink: string;
   repoLink: string;
 }
@@ -31,7 +35,6 @@ export function ProjectOwn({
   function handleRedirect(url: string) {
     window.open(url, '_blank');
   }
-
   return (
     <Container>
       <div>
@@ -43,12 +46,16 @@ export function ProjectOwn({
         <section>
           <SkillsContainer>
             <h1>Habildades Utilizadas</h1>
-            <span>{skillsItens}</span>
+            <span>
+              {skillsItens.map(skill => (
+                <p>{skill.title}</p>
+              ))}
+            </span>
           </SkillsContainer>
           <SliderProject>
             {imgsUrls.map(image => (
               <Carousel.Item>
-                <img src={image} alt="" />
+                <img src={image.url} alt="" />
               </Carousel.Item>
             ))}
           </SliderProject>
