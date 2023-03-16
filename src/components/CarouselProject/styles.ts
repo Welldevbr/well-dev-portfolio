@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   div {
     width: 100%;
-    background: ${({ theme }) => theme.secundary};
+    background: ${({ theme }) => theme.gradient};
     display: flex;
     align-items: center;
     justify-content: center;

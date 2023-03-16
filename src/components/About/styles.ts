@@ -10,7 +10,7 @@ export const Container = styled.div`
     gap: 3rem;
     align-items: center;
     background: ${({ theme }) => theme.gradient};
-    padding: 2rem 4rem;
+    padding: 4rem;
     transition: 0.5s;
     position: relative;
     margin-block: 6rem;
@@ -31,7 +31,7 @@ export const Container = styled.div`
     }
 
     img {
-      width: 35rem;
+      width: 30rem;
       filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.textHighlight});
       opacity: 0.8;
       transition: 0.5s ease-out;
@@ -40,20 +40,20 @@ export const Container = styled.div`
     @media (max-width: 1450px) {
       padding: 4rem 3rem;
       img {
-        width: 28rem;
+        width: 26rem;
       }
     }
 
     @media (max-width: 1200px) {
       img {
-        width: 26rem;
+        width: 24rem;
       }
     }
 
     @media (max-width: 1000px) {
       padding: 2.8rem 2rem;
       img {
-        display: none;
+        width: 20rem;
       }
     }
 

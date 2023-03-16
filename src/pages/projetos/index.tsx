@@ -28,8 +28,20 @@ export default function Projetos({ projects }) {
                 ))}
           </section>
           <div>
-            <h1> Projetos recentes </h1>
-            <CarouselProject projects={projects} />
+            <h1> Websites </h1>
+            <CarouselProject
+              projects={projects.filter(
+                project => project.typeProject === 'Website'
+              )}
+            />
+          </div>
+          <div>
+            <h1> Projetos de Design </h1>
+            <CarouselProject
+              projects={projects.filter(
+                project => project.typeProject === 'Design'
+              )}
+            />
           </div>
         </main>
         <Footer />

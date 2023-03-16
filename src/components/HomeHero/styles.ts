@@ -4,9 +4,9 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6rem;
+  gap: 10rem;
   width: 100%;
-  margin-block: 8rem;
+  margin-block: 6rem;
   margin-inline: auto;
   position: relative;
   z-index: 1;
@@ -102,6 +102,7 @@ export const Container = styled.section`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 4rem;
   margin-bottom: 3.2rem;
   width: 100%;
   gap: 1.2rem;

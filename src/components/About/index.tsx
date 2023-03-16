@@ -16,11 +16,10 @@ export function About() {
           </header>
           <p>
             Me chamo Wellington Santana, ou “well dev”, sou Desenvolvedor
-            Front-end & Designer. Atualmente sou freelancer como Front-end
-            developer e Designer Gráfico. Desenvolvo interfaces modernas e de
-            alta qualidade, concentrado em performance, animações,
-            responsividade e SEO, além de trabalhar com criação de logos e
-            social medias.
+            Front-end & Designer. Atualmente trabalho como freelancer
+            desenvolvendo interfaces modernas e de alta qualidade, concentradas
+            em performance, animações, responsividade e SEO, além de trabalhar
+            com criação de logos, identidades visuais, , banners e social media.
           </p>
         </div>
         <img draggable="false" src={FigureImg} alt="figure" />
