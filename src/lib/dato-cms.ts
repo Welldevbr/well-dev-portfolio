@@ -1,57 +1,60 @@
-const API_TOKEN = process.env.NEXT_PUBLIC_DATOCMS_API_TOKEN;
-const API_URL = process.env.NEXT_PUBLIC_DATOCMS_URL;
+import {
+  ApolloClient,
+  createHttpLink,
+  gql,
+  InMemoryCache
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
-export async function request({ query, variables }) {
-  const response = await fetch(API_URL, {
-    method: 'POST',
-    headers: {
+const token = 'd849e218708b80c67634a02973e148';
+
+const httpLink = createHttpLink({
+  uri: 'https://graphql.datocms.com/'
+});
+
+export function fetchDatoAPI() {
+  const authLink = setContext((_, { headers }) => ({
+    headers: Object.assign(headers || {}, {
       'Content-Type': 'application/json',
-      authorization: `Bearer ${API_TOKEN}`
-    },
-    body: JSON.stringify({
-      query,
-      variables
+      Accept: 'application/json',
+      Authorization: `Bearer ${token}`
     })
+  }));
+  const client = new ApolloClient({
+    link: authLink.concat(httpLink),
+    cache: new InMemoryCache()
   });
 
-  const json = await response.json();
-  if (json.errors) {
-    throw new Error('Failed to fetch API');
-  }
-
-  return json.data;
+  return client;
 }
-
-const MY_QUERY = `
-{
-  allProjects {
-    id
-    title
-    typeProject
-    description
-    link
-    repo
-    thumbnail {
-      url
-    }
-    gallery {
-      url
-    }
-    tags {
-      title
-    }
-  }
-}
-
-`;
 
 export async function getAllProjects() {
-  const data = await request({
-    query: MY_QUERY,
-    variables: {}
+  const client = fetchDatoAPI();
+  const response = await client.query({
+    query: gql`
+      {
+        allProjects {
+          id
+          title
+          typeProject
+          description
+          link
+          repo
+          thumbnail {
+            url
+          }
+          gallery {
+            url
+          }
+          tags {
+            name
+          }
+        }
+      }
+    `
   });
-
-  return data.allProjects;
+  console.log(response.data.allProjects);
+  return response.data.allProjects;
 }
 
-export default { getAllProjects };
+export default { getAllProjects, fetchDatoAPI };

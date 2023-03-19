@@ -13,7 +13,7 @@ interface ProjectOwnProps {
   description: ReactNode;
   bannerImg: string;
   skillsItens: {
-    title: string;
+    name: string;
   }[];
   imgsUrls: {
     url: string;
@@ -48,7 +48,7 @@ export function ProjectOwn({
             <h1>Habildades Utilizadas</h1>
             <span>
               {skillsItens.map(skill => (
-                <p>{skill.title}</p>
+                <p>{skill.name}</p>
               ))}
             </span>
           </SkillsContainer>
