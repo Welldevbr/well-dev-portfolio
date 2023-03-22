@@ -6,8 +6,6 @@ import { SectionTitle } from '../SectionTitle';
 import { Button } from '../Button/Index';
 
 export function ProjectsSection({ projects }) {
-  const teste = process.env.NEXT_PUBLIC_DATOCMS_URL;
-  console.log(teste);
   return (
     <Container>
       <SectionTitle title="Ultimos Projetos" />
@@ -24,7 +22,7 @@ export function ProjectsSection({ projects }) {
               />
             ))}
       </section>
-      <Button type="button">
+      <Button type="button" data-aos="fade-up">
         <Link href="/projetos">
           <a>Ver todos os Projetos</a>
         </Link>

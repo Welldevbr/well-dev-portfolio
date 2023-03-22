@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   h1 {
     font-weight: 700;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     color: ${({ theme }) => theme.text};
 
     span {
@@ -19,7 +19,7 @@ export const Container = styled.div`
 
   h2 {
     font-weight: 300;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: ${({ theme }) => theme.secundary};
   }
 

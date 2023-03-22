@@ -5,7 +5,7 @@ import perfilImage from '../../assets/perfil.png';
 
 export function HomeHero() {
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <img draggable="false" src={perfilImage} alt="Perfil" />
       <div>
         <TextContainer>

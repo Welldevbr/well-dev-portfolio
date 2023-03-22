@@ -29,7 +29,7 @@ export function CarouselProject({ projects }) {
   };
 
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <Slider {...settings}>
         {projects &&
           projects.map(project => (

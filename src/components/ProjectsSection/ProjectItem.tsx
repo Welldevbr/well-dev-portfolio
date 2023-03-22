@@ -11,7 +11,7 @@ interface ProjectProps {
 
 export function ProjectItem({ title, type, img, slug }: ProjectProps) {
   return (
-    <ProjectContainer imgUtl={img}>
+    <ProjectContainer imgUtl={img} data-aos="fade-up">
       <section>
         <div className="overlay" />
         <div className="text">

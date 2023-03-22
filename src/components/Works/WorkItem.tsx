@@ -9,7 +9,7 @@ interface WorkProps {
 
 export function WorkItem({ title, description, children }: WorkProps) {
   return (
-    <WorkContainer>
+    <WorkContainer data-aos="fade-up">
       <div>{children}</div>
       <h1>{title}</h1>
       <p>{description}</p>

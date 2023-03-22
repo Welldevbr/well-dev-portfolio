@@ -39,6 +39,14 @@ export const ProjectContainer = styled.div<ProjectProps>`
     > section {
       > div.text {
         right: -15rem;
+
+        h1 {
+          color: ${({ theme }) => theme.primary};
+        }
+
+        h2 {
+          color: ${({ theme }) => theme.textHighlight};
+        }
       }
 
       > div.overlay {
@@ -93,16 +101,18 @@ export const ProjectContainer = styled.div<ProjectProps>`
       width: fit-content;
 
       h1 {
-        color: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.text};
         font-size: 2.5rem;
         text-shadow: -4px 5px 22px #11172b;
+        transition: 0.5s;
       }
 
       h2 {
-        color: ${({ theme }) => theme.textHighlight};
+        color: ${({ theme }) => theme.text};
         font-size: 2rem;
         font-weight: 300;
         text-shadow: -4px 5px 22px #11172b;
+        transition: 0.5s;
       }
     }
   }

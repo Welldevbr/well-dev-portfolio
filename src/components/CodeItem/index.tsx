@@ -7,5 +7,5 @@ interface CodeItemProps {
 }
 
 export function CodeItem({ children }: CodeItemProps) {
-  return <Container>{children}</Container>;
+  return <Container data-aos="zoom-in">{children}</Container>;
 }

@@ -11,7 +11,7 @@ export default function Projetos({ projects }) {
       <Header />
       <ProjectsContainer>
         <main className="container">
-          <h1>
+          <h1 data-aos="fade-right">
             <span>#</span> Destaques
           </h1>
           <section>
@@ -28,7 +28,7 @@ export default function Projetos({ projects }) {
                 ))}
           </section>
           <div>
-            <h1> Websites </h1>
+            <h1 data-aos="fade-right"> Websites </h1>
             <CarouselProject
               projects={projects.filter(
                 project => project.typeProject === 'Website'
@@ -36,7 +36,7 @@ export default function Projetos({ projects }) {
             />
           </div>
           <div>
-            <h1> Projetos de Design </h1>
+            <h1 data-aos="fade-right"> Projetos de Design </h1>
             <CarouselProject
               projects={projects.filter(
                 project => project.typeProject === 'Design'

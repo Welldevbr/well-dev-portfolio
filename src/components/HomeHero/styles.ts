@@ -6,7 +6,7 @@ export const Container = styled.section`
   justify-content: center;
   gap: 10rem;
   width: 100%;
-  margin-block: 6rem;
+  margin-top: 10rem;
   margin-inline: auto;
   position: relative;
   z-index: 1;
@@ -43,11 +43,11 @@ export const Container = styled.section`
     background: ${({ theme }) => theme.textHighlight};
     left: -8%;
     top: 10%;
-    opacity: 0.75;
+    opacity: 0.5;
   }
 
   > img {
-    width: 40rem;
+    width: 38rem;
     flex: 1;
   }
 
@@ -102,10 +102,9 @@ export const Container = styled.section`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
   margin-bottom: 3.2rem;
   width: 100%;
-  gap: 1.2rem;
+  gap: 1rem;
 
   h2 {
     font-weight: 700;
@@ -173,5 +172,5 @@ export const InfosContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 `;

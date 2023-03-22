@@ -43,7 +43,7 @@ export function ProjectOwn({
 
       <main>
         {description}
-        <section>
+        <section data-aos="fade-up">
           <SkillsContainer>
             <h1>Habildades Utilizadas</h1>
             <span>
@@ -65,15 +65,17 @@ export function ProjectOwn({
           <Button onClick={() => handleRedirect(demoLink)} type="button">
             <a href="#">Ver projeto online</a>
           </Button>
-          <Button
-            onClick={() => handleRedirect(repoLink)}
-            isOutlined
-            type="button"
-          >
-            <a href="#">
-              Ver repositorio <SiGithub />
-            </a>
-          </Button>
+          {type === 'Website' && (
+            <Button
+              onClick={() => handleRedirect(repoLink)}
+              isOutlined
+              type="button"
+            >
+              <a href="#">
+                Ver repositorio <SiGithub />
+              </a>
+            </Button>
+          )}
         </div>
       </main>
     </Container>

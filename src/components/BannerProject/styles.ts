@@ -7,7 +7,7 @@ interface BannerProps {
 export const Container = styled.div<BannerProps>`
   display: flex;
   width: 100%;
-  height: 26rem;
+  height: 36rem;
   background: url(${props => props.imgUrl}) no-repeat center;
   background-size: cover;
   padding: 2rem 4rem;
@@ -50,7 +50,7 @@ export const Container = styled.div<BannerProps>`
   }
 
   @media (max-width: 1000px) {
-    height: 20rem;
+    height: 26rem;
     > section {
       h1 {
         font-size: 2rem;
@@ -62,7 +62,7 @@ export const Container = styled.div<BannerProps>`
   }
 
   @media (max-width: 700px) {
-    height: 15rem;
+    height: 16rem;
     padding: 2rem;
     > section {
       h1 {

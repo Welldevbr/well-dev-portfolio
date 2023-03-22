@@ -8,7 +8,7 @@ export function About() {
     <Container>
       <SectionTitle title="Sobre mim" />
 
-      <section>
+      <section data-aos="fade-up">
         <div>
           <header>
             <h1>Wellington Santana</h1>
@@ -22,7 +22,12 @@ export function About() {
             com criação de logos, identidades visuais, , banners e social media.
           </p>
         </div>
-        <img draggable="false" src={FigureImg} alt="figure" />
+        <img
+          draggable="false"
+          src={FigureImg}
+          alt="figure"
+          data-aos="zoom-in"
+        />
       </section>
     </Container>
   );

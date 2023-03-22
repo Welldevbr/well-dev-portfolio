@@ -9,7 +9,7 @@ interface SliderProps {
 
 export function SliderProject({ children }: SliderProps) {
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <Carousel variant="dark">{children}</Carousel>
     </Container>
   );
