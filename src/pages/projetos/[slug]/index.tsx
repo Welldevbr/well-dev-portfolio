@@ -1,9 +1,16 @@
+import { useRouter } from 'next/router';
 import Header from '../../../components/Header';
 import { Footer } from '../../../components/Footer';
 import { ProjectOwn } from '../../../components/ProjectOwn';
 import { getAllProjects } from '../../../lib/dato-cms';
+import { LoadingScreen } from '../../../components/LoadingScreen';
 
 export default function SlugProjetc({ project }) {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <LoadingScreen />;
+  }
+
   return (
     <>
       <Header />
@@ -46,6 +53,6 @@ export async function getStaticPaths() {
 
   return {
     paths: slugs,
-    fallback: false
+    fallback: true
   };
 }
