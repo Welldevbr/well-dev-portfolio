@@ -28,7 +28,7 @@ export const Container = styled.div`
 
 export const WorkContainer = styled.div`
   width: 100%;
-  height: 30rem;
+  height: 32rem;
   padding: 2rem;
   background: ${({ theme }) => darken(0.2, theme.linkPrimary)};
   color: ${({ theme }) => theme.text};
@@ -37,7 +37,7 @@ export const WorkContainer = styled.div`
   border: 2px solid ${({ theme }) => theme.secundary};
   border-radius: 0.5rem;
   gap: 2rem;
-  transition: 0.5s ease-in-out;
+  transition: 0.5s !important;
 
   &:hover {
     background: ${({ theme }) => darken(0.2, theme.linkPrimary)};

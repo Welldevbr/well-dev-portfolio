@@ -34,7 +34,7 @@ export const Container = styled.div`
       width: 30rem;
       filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.textHighlight});
       opacity: 0.8;
-      transition: 0.5s ease-out;
+      transition: 0.5s ease-out !important;
     }
 
     @media (max-width: 1450px) {

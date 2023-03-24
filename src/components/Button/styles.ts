@@ -9,7 +9,7 @@ export const Container = styled.button<ButtonType>`
   background: ${({ theme }) => theme.primary};
   padding: 0.8rem 3rem;
   border-radius: 0.5rem;
-  transition: 0.5s ease-out;
+  transition: 0.5s ease-out !important;
   width: 40%;
 
   &:hover {
@@ -22,7 +22,7 @@ export const Container = styled.button<ButtonType>`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   ${({ isOutlined }) =>

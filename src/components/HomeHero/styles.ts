@@ -6,7 +6,7 @@ export const Container = styled.section`
   justify-content: center;
   gap: 10rem;
   width: 100%;
-  margin-top: 10rem;
+  margin-block: 6rem;
   margin-inline: auto;
   position: relative;
   z-index: 1;
@@ -52,6 +52,7 @@ export const Container = styled.section`
   }
 
   > div {
+    margin-top: 4rem;
     flex: 4;
   }
 
@@ -102,7 +103,7 @@ export const Container = styled.section`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
   width: 100%;
   gap: 1rem;
 

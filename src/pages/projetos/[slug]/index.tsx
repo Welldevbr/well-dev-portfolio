@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import Header from '../../../components/Header';
 import { Footer } from '../../../components/Footer';
 import { ProjectOwn } from '../../../components/ProjectOwn';
@@ -14,6 +15,16 @@ export default function SlugProjetc({ project }) {
   return (
     <>
       <Header />
+      <Head>
+        <title>{project.title} | Well Dev</title>
+        <meta name="description" content={project.description} />
+        <meta property="og:image" content={project.thumbnail} />
+        <meta property="og:image:secure_url" content={project.thumbnail} />
+        <meta name="twitter:image" content={project.thumbnail} />
+        <meta name="twitter:image:src" content={project.thumbnail} />
+        <meta property="og:description" content={project.description} />
+      </Head>
+
       <ProjectOwn
         title={project.title}
         type={project.typeProject}

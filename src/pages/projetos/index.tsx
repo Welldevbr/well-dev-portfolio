@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Header from '../../components/Header';
 import { Project } from '../../components/Project';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
@@ -9,6 +10,22 @@ export default function Projetos({ projects }) {
   return (
     <>
       <Header />
+      <Head>
+        <title>Projetos | Well Dev</title>
+        <meta
+          name="description"
+          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
+        />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
+        />
+      </Head>
+
       <ProjectsContainer>
         <main className="container">
           <h1 data-aos="fade-right">
