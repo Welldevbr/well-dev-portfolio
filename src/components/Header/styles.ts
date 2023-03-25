@@ -143,11 +143,6 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     }
 
     @media (max-width: 700px) {
-      padding: 0.2rem 1.5rem;
-      font-size: 1rem;
-    }
-
-    @media (max-width: 450px) {
       padding: 0.2rem 2.5rem;
       font-size: 1.2rem;
     }
