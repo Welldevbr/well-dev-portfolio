@@ -6,10 +6,10 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-const token = 'd849e218708b80c67634a02973e148';
+const token = process.env.NEXT_DATOCMS_API_TOKEN;
 
 const httpLink = createHttpLink({
-  uri: 'https://graphql.datocms.com/'
+  uri: process.env.NEXT_PUBLIC_DATOCMS_URL
 });
 
 export function fetchDatoAPI() {
