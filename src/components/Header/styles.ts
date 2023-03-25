@@ -81,34 +81,11 @@ export const Container = styled.header<NavProps>`
   }
 
   @media (max-width: 700px) {
-    ul {
-      gap: 1rem;
-      ${({ isVisible }) =>
-        isVisible &&
-        css`
-          display: flex;
-          overflow: hidden;
-        `}
-    }
-    > img {
-      width: 8rem;
-    }
     svg {
+      position: relative;
       width: 2.5rem;
       height: 2.5rem;
       margin: none;
-    }
-  }
-
-  @media (max-width: 550px) {
-    > img {
-      width: 6rem;
-    }
-
-    svg {
-      position: relative;
-      width: 1.5rem;
-      height: 1.5rem;
       z-index: 999999;
     }
 
@@ -123,6 +100,16 @@ export const Container = styled.header<NavProps>`
       align-items: center;
       justify-content: center;
       flex-direction: column;
+    }
+
+    > img {
+      width: 8rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    > img {
+      width: 6rem;
     }
   }
 `;
