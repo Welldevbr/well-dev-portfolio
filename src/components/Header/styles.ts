@@ -108,8 +108,9 @@ export const Container = styled.header<NavProps>`
   }
 
   @media (max-width: 550px) {
-    > img {
-      width: 6rem;
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
     }
   }
 `;
