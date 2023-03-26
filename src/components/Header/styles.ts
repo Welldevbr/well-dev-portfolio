@@ -17,7 +17,7 @@ export const Container = styled.header<NavProps>`
   position: fixed;
   z-index: 1000;
   width: 100%;
-  padding: 2rem 8rem;
+  padding: 1.5rem 8rem;
   background: ${props =>
     props.isActive ? 'rgba(0, 14, 27, 0.8)' : 'trasparent'};
   backdrop-filter: ${props => (props.isActive ? 'blur(2rem)' : 'none')};
@@ -25,7 +25,7 @@ export const Container = styled.header<NavProps>`
     ${props => (props.isActive ? props.theme.backgroundLight : 'trasparent')};
 
   img {
-    width: 14rem;
+    width: 12rem;
   }
 
   ul {
@@ -53,7 +53,7 @@ export const Container = styled.header<NavProps>`
     }
     padding: 2rem 4rem;
     > img {
-      width: 12rem;
+      width: 10rem;
     }
   }
 
@@ -77,7 +77,7 @@ export const Container = styled.header<NavProps>`
   }
 
   @media (max-width: 1000px) {
-    padding: 2rem;
+    padding: 1rem 2rem;
   }
 
   @media (max-width: 700px) {
@@ -103,14 +103,15 @@ export const Container = styled.header<NavProps>`
     }
 
     > img {
-      width: 8rem;
+      width: 7.5rem;
     }
   }
 
   @media (max-width: 550px) {
+    padding: 0.75rem 2rem;
     svg {
-      width: 1.8rem;
-      height: 1.8rem;
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 `;
@@ -120,7 +121,7 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 3.5rem;
-    padding: 0.5rem 4rem;
+    padding: 0.25rem 4rem;
     position: relative;
     background: ${props => (props.isActive ? props.theme.linkPrimary : 'none')};
     border-radius: 10rem;
