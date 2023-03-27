@@ -19,8 +19,8 @@ export const Container = styled.header<NavProps>`
   width: 100%;
   padding: 1.5rem 8rem;
   background: ${props =>
-    props.isActive ? 'rgba(0, 14, 27, 0.8)' : 'trasparent'};
-  backdrop-filter: ${props => (props.isActive ? 'blur(2rem)' : 'none')};
+    props.isActive ? 'rgba(0, 14, 27, 0.5)' : 'trasparent'};
+  backdrop-filter: ${props => (props.isActive ? 'blur(1.5rem)' : 'none')};
   border-bottom: 1px solid
     ${props => (props.isActive ? props.theme.backgroundLight : 'trasparent')};
 
@@ -108,7 +108,6 @@ export const Container = styled.header<NavProps>`
   }
 
   @media (max-width: 550px) {
-    padding: 0.75rem 2rem;
     svg {
       width: 1.5rem;
       height: 1.5rem;
