@@ -54,6 +54,7 @@ export function Form() {
     <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
       <Input
         placeholder="Nome"
+        type="text"
         value={name}
         onChange={({ target }) => setName(target.value)}
       />
@@ -65,6 +66,7 @@ export function Form() {
       />
       <TextArea
         placeholder="Menssagem"
+        typeof="text"
         value={message}
         onChange={({ target }) => setMessage(target.value)}
       />
