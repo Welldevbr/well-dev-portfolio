@@ -11,30 +11,13 @@ export const Container = styled.div`
     align-items: center;
     background: ${({ theme }) => theme.gradient};
     padding: 4rem;
-    transition: 0.5s;
-    position: relative;
     margin-block: 6rem;
-    border-radius: 0.5rem 0.5rem 0 0;
-
-    &::before {
-      content: '';
-      width: 100%;
-      height: 0.2rem;
-      background: ${({ theme }) => theme.primary};
-      border-radius: 0 0 0.5rem 0.5rem;
-      position: absolute;
-      bottom: -0.2rem;
-      left: 0;
-      transform: scaleX(0);
-      transform-origin: bottom center;
-      transition: transform 0.5s ease-out;
-    }
+    border-radius: 0.5rem;
+    outline: 3px solid transparent;
+    transition: 0.5s !important;
 
     img {
       width: 30rem;
-      filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.textHighlight});
-      opacity: 0.8;
-      transition: 0.5s ease-out !important;
     }
 
     @media (max-width: 1450px) {
@@ -78,9 +61,9 @@ export const Container = styled.div`
       header {
         display: flex;
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 2rem;
         position: relative;
-        padding-bottom: 2.4rem;
+        padding-bottom: 1rem;
 
         h1 {
           font-size: 3.2rem;
@@ -156,14 +139,7 @@ export const Container = styled.div`
     }
 
     &:hover {
-      img {
-        filter: drop-shadow(0 0 0.15rem ${({ theme }) => theme.text});
-      }
-
-      &::before {
-        transform: scaleX(1);
-        transform-origin: bottom center;
-      }
+      outline: 3px solid ${({ theme }) => theme.primary} !important;
     }
   }
 `;
