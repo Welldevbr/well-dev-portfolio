@@ -95,7 +95,7 @@ export const Container = styled.header<NavProps>`
       position: absolute;
       top: 0;
       z-index: 999999;
-      background: ${({ theme }) => theme.secundary};
+      background: ${({ theme }) => darken(0.2, theme.secundary)};
       display: flex;
       align-items: center;
       justify-content: center;

@@ -9,12 +9,12 @@ export const Container = styled.div`
     display: flex;
     gap: 3rem;
     align-items: center;
-    background: ${({ theme }) => theme.gradient};
+    background: ${({ theme }) => theme.gradientSecondary};
     padding: 4rem;
     margin-block: 6rem;
     border-radius: 0.5rem;
     outline: 3px solid transparent;
-    transition: 0.5s !important;
+    transition: 0.5s ease-in-out !important;
 
     img {
       width: 30rem;
@@ -139,7 +139,7 @@ export const Container = styled.div`
     }
 
     &:hover {
-      outline: 3px solid ${({ theme }) => theme.primary} !important;
+      outline: 3px solid ${({ theme }) => theme.primary};
     }
   }
 `;
