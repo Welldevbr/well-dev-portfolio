@@ -62,7 +62,7 @@ export const WorkContainer = styled.div`
 
   h1 {
     font-size: 2.5rem;
-    font-family: 'JetBrains', monospace;
+    color: ${({ theme }) => theme.textHighlight};
   }
 
   p {

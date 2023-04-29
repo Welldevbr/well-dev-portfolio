@@ -25,19 +25,6 @@ export const Container = styled.div`
     transition: all 0.5s ease-out;
   }
 
-  &::before {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: ${({ theme }) => theme.primary};
-    position: absolute;
-    bottom: -15%;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: bottom center;
-    transition: transform 0.5s ease-out;
-  }
-
   &:hover {
     p {
       color: ${({ theme }) => theme.primary};
@@ -46,11 +33,6 @@ export const Container = styled.div`
     svg {
       color: ${({ theme }) => theme.primary};
       transform: scale(0.85);
-    }
-
-    &::before {
-      transform: scaleX(1);
-      transform-origin: bottom center;
     }
   }
 

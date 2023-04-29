@@ -12,6 +12,7 @@ export const Container = styled.pre`
   align-self: flex-start;
   cursor: pointer;
   transition: 1s !important;
+  border-radius: 0.5rem;
 
   &:last-child {
     align-self: flex-end;

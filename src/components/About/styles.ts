@@ -9,7 +9,7 @@ export const Container = styled.div`
     display: flex;
     gap: 3rem;
     align-items: center;
-    background: ${({ theme }) => theme.gradientSecondary};
+    background: ${({ theme }) => theme.gradient};
     padding: 4rem;
     margin-block: 6rem;
     border-radius: 0.5rem;
